@@ -1,0 +1,42 @@
+/*
+Theme Name: HHack
+Theme URI: http://hacking.healthcare/
+Author: Matt Sokola <matt@hacking.healthcare>
+Author URI: http://hacking.healthcare/
+Description: Default Theme
+Version: 1.0
+License: Internal Usage Only
+License URI:
+Tags:
+Text Domain: hhack
+*/
+
+//
+// The Main Style
+// --------------------------------------------------
+
+// Setup
+@import '_config';
+@import 'helpers/_normalize';
+
+// Mixins
+@import 'mixins/_basics';
+@import 'mixins/_icons';
+@import 'mixins/_buttons';
+@import 'mixins/_background-size';
+
+// Helpers
+@import 'helpers/_icons';
+@import 'helpers/_buttons';
+@import 'helpers/_screen-readers';
+
+// Partials
+@import 'partials/_global-nav';
+@import 'partials/_sidebar';
+@import 'partials/_footer';
+
+// Pages
+@import 'pages/_home';
+
+// Theme
+@import '_theme';

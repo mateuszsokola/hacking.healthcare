@@ -1,0 +1,232 @@
+//
+// Global Nav
+// --------------------------------------------------
+@import '../_config';
+
+// required mixins
+@import '../mixins/_basics';
+
+// Config
+// --------------------------------------------------
+$text-font: 'Raleway', sans-serif;
+$text-size: 14px;
+$text-color: #404040;
+$text-transform: uppercase;
+$height: 60px;
+
+// Base
+// --------------------------------------------------
+
+.admin-bar .global-nav {
+  // TODO: Make it responsive [Mateusz]
+  top: 32px !important;
+}
+
+.global-nav {
+  position: fixed;
+  background: #fff;
+  height: $height;
+  width: 100%;
+  top: 0;
+  @include box-shadow(1px 0 5px rgba(0,0,0,.25));
+
+  .container {
+    padding: 5px 10px;
+  }
+
+  .global-nav-header {
+    @include clearfix;
+
+    @media (min-width: 720px) {
+      float: left;
+    }
+  }
+
+  .menu-toggle {
+    position: relative;
+    float: right;
+    margin-right: 0;
+    background-color: transparent;
+    // Reset unusual Firefox-on-Android default style; @see https://github.com/necolas/normalize.css/issues/214
+    background-image: none;
+    border: 1px solid transparent;
+
+    &:focus {
+      outline: 0;
+    }
+
+    // Bars
+    .icon-bar {
+      // TODO: Move it to vars [Mateusz]
+      background: #404040;
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+    }
+    .icon-bar + .icon-bar {
+      margin-top: 4px;
+    }
+
+    // TODO: Setup proper breakpoint [Mateusz]
+    @media (min-width: 720px) {
+      display: none;
+    }
+  }
+
+
+  .menu-collapse {
+    overflow-x: visible;
+    padding-right: 0;
+    padding-left:  0;
+    //border-top: 1px solid transparent;
+    @include clearfix;
+    -webkit-overflow-scrolling: touch;
+    float: right;
+
+    &.in {
+      overflow-y: auto;
+    }
+  }
+}
+
+.menu-nav {
+  // font
+  font-family: $text-font;
+  font-size: $text-size;
+  text-transform: $text-transform;
+  text-align: center;
+  // shape
+  margin: 10px 0 0 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+
+  > li {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 0 2.5px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    > a {
+      // font
+      color: $text-color;
+      text-decoration: none;
+      // shape
+      position: relative;
+      display: block;
+      padding: 7px 12px;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    &.current-menu-item a {
+      background: blue;
+      color: #fff;
+      border-radius: 10px;
+    }
+  }
+
+  .menu-item-has-children,
+  .page_item_has_children {
+    position: relative;
+
+    > a {
+      padding-right: 25px;
+
+      &:after {
+        position: absolute;
+        margin: 3px 0 0 7px;
+        // font
+        @include icon-font;
+        content: "\e601";
+        font-size: 10px;
+        // animation
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    &.open {
+
+      // Show the menu
+      > .dropdown-menu {
+        display: block;
+      }
+
+      // Remove the outline when :focus is triggered
+      > a {
+        outline: 0;
+
+        &:after {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  // The dropdown menu (ul)
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    display: none; // none by default, but block on "open" of the menu
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    margin: 15px 0 0; // override default ul
+    list-style: none;
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+    background-color: #fff;
+    @include box-shadow(0 3px 5px rgba(0,0,0,.2));
+    background-clip: padding-box;
+
+    // Links within the dropdown menu
+    > li {
+      border-top: 1px solid #e0e0e0;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      > a {
+        // font
+        font-family: $text-font;
+        font-size: $text-size;
+        color: $text-color;
+        text-transform: $text-transform;
+        text-decoration: none;
+        // shape
+        display: block;
+        padding: 5px 20px;
+        clear: both;
+        font-weight: normal;
+        line-height: 24px;
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+}
+

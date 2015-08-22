@@ -1,0 +1,68 @@
+//
+// Homepage
+// --------------------------------------------------
+
+@import '../_config';
+// Mixins
+@import '../mixins/_background-size';
+
+// Config
+// --------------------------------------------------
+$text-font: 'Open Sans', sans-serif;
+$text-size: 12px;
+$text-height: 24px;
+$text-color: #fff;
+
+$headline-size: 24px;
+$headline-height: 50px;
+$headline-weight: normal;
+$large-headline-size: 32px;
+
+$section-padding-top: 120px;
+$section-padding-bottom: 140px;
+
+.home-page {
+  // shape
+  @include background-size(cover);
+  overflow: hidden;
+  margin-top: $height;
+  width: 100%;
+  // font
+  font-family: $text-font;
+  font-size: $text-size;
+  line-height: $text-height;
+  color: $text-color;
+
+  .home-page-inner {
+    // shape
+    background: rgba(0,0,0,.5); // fade background
+  }
+
+  .container {
+    // shape
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+    // font
+    text-align: center;
+  }
+
+  .button {
+    margin: 0 20px;
+  }
+
+  h1 {
+    // shape
+    margin-bottom: 120px;
+    // font
+    font-size: $headline-size;
+    line-height: $headline-height;
+    font-weight: $headline-weight;
+
+    .headline {
+      // shape
+      display: block;
+      // font
+      font-size: $large-headline-size;
+    }
+  }
+}

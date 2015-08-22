@@ -1,0 +1,26 @@
+//
+// Sidebar
+// --------------------------------------------------
+@import '../_config';
+
+// required mixins
+@import '../mixins/_basics';
+
+// Config
+// --------------------------------------------------
+$text-font: 'Open Sans', sans-serif;
+$text-size: 12px;
+$text-height: 16px;
+$text-color: #989898;
+
+$background-color: #202020;
+$background-image: url("assets/pattern.png");
+
+// Base
+// --------------------------------------------------
+.sidebar {
+  background: $background-color $background-image;
+  @include box-shadow(inset 0 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+

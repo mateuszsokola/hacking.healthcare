@@ -1,0 +1,17 @@
+{
+  "name": "hacking.healthcare",
+  "version": "0.0.1",
+  "description": "hacking.healthcare website",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateusz Sokola",
+  "license": "Internal",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

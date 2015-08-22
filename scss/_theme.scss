@@ -1,0 +1,31 @@
+//
+// Theme
+// --------------------------------------------------
+@import '_config';
+
+html {
+  height: 100%
+}
+
+body {
+  font-family : $default-text-font;
+  font-size   : $default-text-size;
+  height: 100%
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  @include clearfix;
+}
+
+.global-logo {
+  background: url($logo-url-png);
+  // TODO: Add it as an inline svg [Mateusz]
+  background: url($logo-url-svg), none;
+  background-size: $logo-width $logo-height;
+  height: $logo-height;
+  width: $logo-width;
+  text-indent: -9999px;
+  display: block;
+}

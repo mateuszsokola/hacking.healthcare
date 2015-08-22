@@ -1,0 +1,87 @@
+//
+// Buttons
+// @see bootstrap-sass
+// --------------------------------------------------
+@import '../_config';
+// required mixins
+@import '../mixins/_basics';
+@import '../mixins/_buttons';
+
+// Config
+// --------------------------------------------------
+$default-text-font: 'Raleway', sans-serif;;
+$default-text-size: 14px;
+$default-text-height: 18px;
+$default-text-transform: uppercase;
+$default-text-weight: normal;
+$default-padding-vertical: 10px;
+$default-padding-horizontal: 20px;
+$default-radius: 10px;
+
+// default button
+$default-text-color: #fff;
+$default-background: transparent;
+$default-border-color: #fff;
+
+// primary button
+$primary-text-color: #fff;
+$primary-background: #c90000;
+$primary-border-color: #c90000;
+
+// Base styles
+// --------------------------------------------------
+.button {
+  // shape
+  display: inline-block;
+  margin-bottom: 0; // For input.button
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 2px solid transparent;
+  // font
+  font-family: $default-text-font;
+  font-weight: $default-text-weight;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-transform: $default-text-transform;
+  text-decoration: none;
+  text-align: center;
+  // inheritance
+  @include user-select(none);
+  @include button-size(
+    $default-padding-vertical,
+    $default-padding-horizontal,
+    $default-text-size,
+    $default-text-height,
+    $default-radius
+  );
+  // TODO: no hover state for default button [Mateusz]
+  @include button-variant(
+    $default-text-color,
+    $default-background,
+    $default-border-color
+  );
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $default-text-color;
+  }
+
+  &.primary {
+    @include button-variant(
+      $primary-text-color,
+      $primary-background,
+      $primary-border-color
+    );
+  }
+}
