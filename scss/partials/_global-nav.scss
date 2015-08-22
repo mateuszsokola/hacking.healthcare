@@ -8,23 +8,42 @@
 
 // Config
 // --------------------------------------------------
+// Text, Links etc.
 $text-font: 'Raleway', sans-serif;
 $text-size: 14px;
 $text-color: #404040;
 $text-transform: uppercase;
+$text-weight: normal;
+$line-height: 24px;
+
+// Link default
+$link-default-transform: none;
+
+// Link active
+$link-active-transform: underline;
+
+// Navbar
+$bg-color: #fff;
 $height: 60px;
+$border-color: #e0e0e0;
+
+// Breakpoints
+$mobile-breakpoint: 720px;
+
+// Bars
+$bar-color: #404040;
+$bar-width: 22px;
+$bar-height: 2px;
+
+// TODO: fix dropdown expanding [mateusz]
+
 
 // Base
 // --------------------------------------------------
 
-.admin-bar .global-nav {
-  // TODO: Make it responsive [Mateusz]
-  top: 32px !important;
-}
-
 .global-nav {
   position: fixed;
-  background: #fff;
+  background: $bg-color;
   height: $height;
   width: 100%;
   top: 0;
@@ -46,6 +65,7 @@ $height: 60px;
     position: relative;
     float: right;
     margin-right: 0;
+    padding: 18px;
     background-color: transparent;
     // Reset unusual Firefox-on-Android default style; @see https://github.com/necolas/normalize.css/issues/214
     background-image: none;
@@ -57,35 +77,44 @@ $height: 60px;
 
     // Bars
     .icon-bar {
-      // TODO: Move it to vars [Mateusz]
-      background: #404040;
-      display: block;
-      width: 22px;
-      height: 2px;
+      background: $bar-color;
+      width: $bar-width;
+      height: $bar-height;
       border-radius: 1px;
+      display: block;
     }
     .icon-bar + .icon-bar {
       margin-top: 4px;
     }
 
-    // TODO: Setup proper breakpoint [Mateusz]
-    @media (min-width: 720px) {
+    @media (min-width: $mobile-breakpoint) {
       display: none;
     }
   }
 
-
   .menu-collapse {
     overflow-x: visible;
-    padding-right: 0;
-    padding-left:  0;
-    //border-top: 1px solid transparent;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
     @include clearfix;
     -webkit-overflow-scrolling: touch;
-    float: right;
 
     &.in {
       overflow-y: auto;
+    }
+
+    @media (min-width: $mobile-breakpoint) {
+      width: auto;
+      border-top: 0;
+      box-shadow: none;
+      float: right;
+      margin: 5px 0;
+
+      &.in {
+        overflow-y: visible;
+      }
     }
   }
 }
@@ -97,53 +126,70 @@ $height: 60px;
   text-transform: $text-transform;
   text-align: center;
   // shape
-  margin: 10px 0 0 0;
+  margin: 0;
   padding-left: 0; // Override default ul/ol
   list-style: none;
   @include clearfix;
+  // animation
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 
   > li {
-    position: relative;
-    display: block;
-    float: left;
-    padding: 0 2.5px;
+    background: $bg-color;
+    border-top: 1px solid $border-color;
+    width: 100%;
 
-    &:last-child {
-      padding-right: 0;
+    @media (min-width: $mobile-breakpoint) {
+      // position
+      position: relative;
+      float: left;
+      // shape
+      padding: 0 2.5px;
+      width: auto;
+      border-top: none;
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
 
     > a {
       // font
       color: $text-color;
-      text-decoration: none;
+      text-decoration: $link-default-transform;
+      line-height: $line-height;
       // shape
       position: relative;
       display: block;
-      padding: 7px 12px;
+      padding: 8px 12px;
 
       &:hover,
       &:focus {
-        text-decoration: underline;
+        text-decoration: $link-active-transform;
       }
     }
 
-    &.current-menu-item a {
-      background: blue;
+    &.active a {
+      background: blue; // TODO change the color [Mateusz]
       color: #fff;
       border-radius: 10px;
     }
   }
 
-  .menu-item-has-children,
-  .page_item_has_children {
+  .has-dropdown {
     position: relative;
+    // animation
+    -webkit-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
 
     > a {
       padding-right: 25px;
 
       &:after {
         position: absolute;
-        margin: 3px 0 0 7px;
+        margin: 15px;
+        right: 0;
+        top: 0;
         // font
         @include icon-font;
         content: "\e601";
@@ -151,14 +197,17 @@ $height: 60px;
         // animation
         -webkit-transition: -webkit-transform 0.3s ease-in-out;
         transition: transform 0.3s ease-in-out;
+
+        @media (min-width: $mobile-breakpoint) {
+          margin: 14px 7px;
+        }
       }
     }
 
-    &.open {
-
+    &.dropdown-open {
       // Show the menu
       > .dropdown-menu {
-        display: block;
+        height: 100%;
       }
 
       // Remove the outline when :focus is triggered
@@ -166,6 +215,7 @@ $height: 60px;
         outline: 0;
 
         &:after {
+          // animation
           -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
         }
@@ -174,29 +224,40 @@ $height: 60px;
   }
 
   // The dropdown menu (ul)
-  .sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .dropdown-menu {
+    // hidden
+    overflow: hidden;
+    height: 0;
+    // position
     z-index: 5;
-    display: none; // none by default, but block on "open" of the menu
-    float: left;
-    min-width: 160px;
     padding: 0;
-    margin: 15px 0 0; // override default ul
+    margin: 0;
+    // shape
+    min-width: 160px;
     list-style: none;
-    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-    background-color: #fff;
-    @include box-shadow(0 3px 5px rgba(0,0,0,.2));
+    background-color: $bg-color;
     background-clip: padding-box;
+
+    @media (min-width: 720px) {
+      // position
+      position: absolute;
+      margin: 10px 0 0;
+      top: 100%;
+      left: 0;
+      float: left;
+      // shape
+      @include box-shadow(0 3px 5px rgba(0,0,0,.2));
+      // font
+      text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+
+      > li:first-child {
+          border-top: 0;
+      }
+    }
 
     // Links within the dropdown menu
     > li {
-      border-top: 1px solid #e0e0e0;
-
-      &:first-child {
-        border-top: 0;
-      }
+      border-top: 1px solid $border-color;
 
       > a {
         // font
@@ -204,18 +265,18 @@ $height: 60px;
         font-size: $text-size;
         color: $text-color;
         text-transform: $text-transform;
-        text-decoration: none;
+        text-decoration: $link-default-transform;
+        line-height: $line-height;
+        font-weight: $text-weight;
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
         // shape
         display: block;
-        padding: 5px 20px;
+        padding: 8px 12px;
         clear: both;
-        font-weight: normal;
-        line-height: 24px;
-        white-space: nowrap; // prevent links from randomly breaking onto new lines
 
         &:hover,
         &:focus {
-          text-decoration: underline;
+          text-decoration: $link-active-transform;
         }
       }
 
@@ -229,4 +290,3 @@ $height: 60px;
     }
   }
 }
-

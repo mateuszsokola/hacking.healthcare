@@ -5,6 +5,15 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
 
+        connect: {
+            server: {
+                options: {
+                    port: 9000,
+                    hostname: 'localhost'
+                }
+            }
+        },
+
         sass: {
             dist: {
                 options: {
@@ -31,14 +40,11 @@ module.exports = function (grunt) {
             },
 
             files: {
-
                 options: {
                     livereload: true
                 },
-
                 files: [
-                    '**/*.php',
-                    '**/*.json'
+                    '**/*.html'
                 ]
             }
         }
@@ -53,11 +59,12 @@ module.exports = function (grunt) {
 
     // task definitions
     grunt.registerTask('default', [
+        'connect',
         'sass',
         'watch'
     ]);
 
     grunt.registerTask('build', [
-
+      // TODO add the task [Mateusz]
     ]);
 };
