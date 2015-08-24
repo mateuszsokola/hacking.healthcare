@@ -8,15 +8,57 @@ html {
 }
 
 body {
-  font-family : $default-text-font;
-  font-size   : $default-text-size;
-  height: 100%
+  font-family: $default-text-font;
+  font-size: $default-text-size;
+  height: 100%;
+  min-width: $breakpoint-smartphone;
+}
+
+div {
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 980px;
+  max-width: $breakpoint-large;
   margin: 0 auto;
   @include clearfix;
+
+  > .col {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 25%;
+  }
+
+  @media (min-width: $breakpoint-smartphone) {
+    max-width: $breakpoint-smartphone;
+
+    > .col {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    max-width: $breakpoint-tablet;
+
+    > .col {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    max-width: $breakpoint-desktop;
+
+    > .col {
+      width: 25%;
+    }
+  }
+
+  @media (min-width: $breakpoint-large) {
+    max-width: $breakpoint-large;
+  }
 }
 
 .global-logo {

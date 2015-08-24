@@ -36,6 +36,7 @@ $bar-width: 22px;
 $bar-height: 2px;
 
 // TODO: fix dropdown expanding [mateusz]
+// TODO: menu button on mobile too far from the right side [mateusz]
 
 
 // Base
@@ -55,10 +56,6 @@ $bar-height: 2px;
 
   .global-nav-header {
     @include clearfix;
-
-    @media (min-width: 720px) {
-      float: left;
-    }
   }
 
   .menu-toggle {
@@ -86,10 +83,6 @@ $bar-height: 2px;
     .icon-bar + .icon-bar {
       margin-top: 4px;
     }
-
-    @media (min-width: $mobile-breakpoint) {
-      display: none;
-    }
   }
 
   .menu-collapse {
@@ -103,18 +96,7 @@ $bar-height: 2px;
 
     &.in {
       overflow-y: auto;
-    }
-
-    @media (min-width: $mobile-breakpoint) {
-      width: auto;
-      border-top: 0;
-      box-shadow: none;
-      float: right;
-      margin: 5px 0;
-
-      &.in {
-        overflow-y: visible;
-      }
+      height: auto;
     }
   }
 }
@@ -139,20 +121,6 @@ $bar-height: 2px;
     border-top: 1px solid $border-color;
     width: 100%;
 
-    @media (min-width: $mobile-breakpoint) {
-      // position
-      position: relative;
-      float: left;
-      // shape
-      padding: 0 2.5px;
-      width: auto;
-      border-top: none;
-
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-
     > a {
       // font
       color: $text-color;
@@ -168,19 +136,10 @@ $bar-height: 2px;
         text-decoration: $link-active-transform;
       }
     }
-
-    &.active a {
-      background: blue; // TODO change the color [Mateusz]
-      color: #fff;
-      border-radius: 10px;
-    }
   }
 
   .has-dropdown {
     position: relative;
-    // animation
-    -webkit-transition: height 0.3s ease-in-out;
-    transition: height 0.3s ease-in-out;
 
     > a {
       padding-right: 25px;
@@ -197,17 +156,12 @@ $bar-height: 2px;
         // animation
         -webkit-transition: -webkit-transform 0.3s ease-in-out;
         transition: transform 0.3s ease-in-out;
-
-        @media (min-width: $mobile-breakpoint) {
-          margin: 14px 7px;
-        }
       }
     }
 
     &.dropdown-open {
-      // Show the menu
-      > .dropdown-menu {
-        height: 100%;
+      .dropdown-menu {
+        display: block;
       }
 
       // Remove the outline when :focus is triggered
@@ -225,35 +179,16 @@ $bar-height: 2px;
 
   // The dropdown menu (ul)
   .dropdown-menu {
-    // hidden
-    overflow: hidden;
-    height: 0;
+    // invisible by default
+    display: none;
     // position
     z-index: 5;
     padding: 0;
-    margin: 0;
     // shape
     min-width: 160px;
     list-style: none;
     background-color: $bg-color;
     background-clip: padding-box;
-
-    @media (min-width: 720px) {
-      // position
-      position: absolute;
-      margin: 10px 0 0;
-      top: 100%;
-      left: 0;
-      float: left;
-      // shape
-      @include box-shadow(0 3px 5px rgba(0,0,0,.2));
-      // font
-      text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-
-      > li:first-child {
-          border-top: 0;
-      }
-    }
 
     // Links within the dropdown menu
     > li {
@@ -287,6 +222,69 @@ $bar-height: 2px;
           outline: 0;
         }
       }
+    }
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+
+  .global-nav {
+
+    .global-nav-header {
+      float: left;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-collapse {
+      width: auto;
+      border-top: 0;
+      box-shadow: none;
+      float: right;
+      margin: 5px 0;
+
+      &.in {
+        overflow-y: visible;
+      }
+    }
+  }
+
+  .menu-nav {
+    > li {
+      // position
+      position: relative;
+      float: left;
+      // shape
+      padding: 0 2.5px;
+      width: auto;
+      border-top: none;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    .has-dropdown > a:after {
+      margin: 14px 7px;
+    }
+  }
+
+  .dropdown-menu {
+    // position
+    position: absolute;
+    margin-top: 10px;
+    top: 100%;
+    left: 0;
+    float: left;
+    // shape
+    @include box-shadow(0 3px 5px rgba(0,0,0,.2));
+    // font
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+
+    > li:first-child {
+      border-top: 0;
     }
   }
 }

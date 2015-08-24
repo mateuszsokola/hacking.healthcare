@@ -8,12 +8,29 @@
 
 // Config
 // --------------------------------------------------
-$text-font: 'Open Sans', sans-serif;
-$text-size: 12px;
-$text-height: 16px;
-$text-color: #989898;
+// Text, Links etc.
+$text-font: 'Raleway', sans-serif;
+$text-size: 14px;
+$text-color: #fff;
+$text-transform: none;
+$text-weight: normal;
+$line-height: 20px;
 
-$background-color: #202020;
+// Heading
+$title-color: #fff;
+$title-size: 14px;
+$title-line-height: 20px;
+$title-transform: uppercase;
+
+// Links
+$link-decoration: none;
+$link-transform: none;
+$link-line-height: 16px;
+$link-default-color: #a4a4a4;
+
+
+// Sidebar
+$background-color: #202020;;
 $background-image: url("assets/pattern.png");
 
 // Base
@@ -21,6 +38,67 @@ $background-image: url("assets/pattern.png");
 .sidebar {
   background: $background-color $background-image;
   @include box-shadow(inset 0 2px 5px rgba(0, 0, 0, 0.3));
+  // font
+  font-size: $text-size;
+  color: $text-color;
+  text-transform: $text-transform;
+  line-height: $line-height;
+
+  a {
+    // font
+    font-family: $text-font;
+    font-weight: $text-weight;
+    color: $link-default-color;
+    text-transform: $link-transform;
+    line-height: $link-line-height;
+    text-decoration: $link-decoration;
+    // shape
+    display: inline-block;
+    padding: 5px 0;
+  }
+
+  p,
+  .contact-link {
+    margin: 15px 0;
+  }
+
+  .container > .col {
+    // shape
+    padding: 20px 10px;
+    min-height: 265px;
+  }
+
+  .title {
+    // font
+    font-size: $title-size;
+    color: $title-color;
+    line-height: $title-line-height;
+    text-transform: $title-transform;
+    // shape
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
+.sidebar-nav {
+  // shape
+  margin: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
 
+  > li {
+    padding: 3px 0;
+  }
+}
+
+@media (min-width: $breakpoint-smartphone) and (max-width: $breakpoint-tablet) {
+  .sidebar  {
+    text-align: center;
+    padding-bottom: 20px;
+
+    .container > .col {
+      min-height: auto;
+    }
+  }
+}
