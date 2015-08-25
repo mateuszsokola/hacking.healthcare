@@ -35,9 +35,6 @@ $bar-color: #404040;
 $bar-width: 22px;
 $bar-height: 2px;
 
-// TODO: menu button on mobile too far from the right side [mateusz]
-
-
 // Base
 // --------------------------------------------------
 
@@ -85,23 +82,19 @@ $bar-height: 2px;
   }
 
   .menu-collapse {
-    overflow-x: visible;
-    margin-left: -10px;
-    margin-right: -10px;
+    display: none;
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
     @include clearfix;
     -webkit-overflow-scrolling: touch;
 
-    &.in {
-      overflow-y: auto;
-      height: auto;
+    &.menu-open {
+      display: block;
     }
   }
 }
 
 .menu-nav {
-  display: none;
   // font
   font-family: $text-font;
   font-size: $text-size;
@@ -119,7 +112,8 @@ $bar-height: 2px;
     border-top: 1px solid $border-color;
     width: 100%;
 
-    > a {
+    > a,
+    > .link {
       // font
       color: $text-color;
       text-decoration: $link-default-transform;
@@ -128,6 +122,7 @@ $bar-height: 2px;
       position: relative;
       display: block;
       padding: 8px 12px;
+      cursor: pointer;
 
       &:hover,
       &:focus {
@@ -139,7 +134,8 @@ $bar-height: 2px;
   .has-dropdown {
     position: relative;
 
-    > a {
+    > a,
+    > .link {
       padding-right: 25px;
 
       &:after {
@@ -151,9 +147,6 @@ $bar-height: 2px;
         @include icon-font;
         content: "\e601";
         font-size: 10px;
-        // animation
-        -webkit-transition: -webkit-transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
       }
     }
 
@@ -163,7 +156,8 @@ $bar-height: 2px;
       }
 
       // Remove the outline when :focus is triggered
-      > a {
+      > a,
+      > .link {
         outline: 0;
 
         &:after {
@@ -177,7 +171,6 @@ $bar-height: 2px;
 
   // The dropdown menu (ul)
   .dropdown-menu {
-    // invisible by default
     display: none;
     // position
     z-index: 5;
@@ -192,7 +185,8 @@ $bar-height: 2px;
     > li {
       border-top: 1px solid $border-color;
 
-      > a {
+      > a,
+      > .link {
         // font
         font-family: $text-font;
         font-size: $text-size;
@@ -213,7 +207,8 @@ $bar-height: 2px;
         }
       }
 
-      &.active > a {
+      &.active > a,
+      &.active > .link {
         &,
         &:hover,
         &:focus {
@@ -240,15 +235,12 @@ $bar-height: 2px;
     }
 
     .menu-collapse {
+      display: block;
       width: auto;
       border-top: 0;
       box-shadow: none;
       float: right;
-      margin: 5px 0;
-
-      &.in {
-        overflow-y: visible;
-      }
+      margin: 3px 0;
     }
   }
 
@@ -267,7 +259,8 @@ $bar-height: 2px;
       }
     }
 
-    .has-dropdown > a:after {
+    .has-dropdown > a:after,
+    .has-dropdown > .link:after, {
       margin: 14px 7px;
     }
   }
