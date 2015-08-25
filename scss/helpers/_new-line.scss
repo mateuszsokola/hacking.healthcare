@@ -1,0 +1,10 @@
+//
+// New line
+// --------------------------------------------------
+.newline-mobile {
+  display: block;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: inline-block;
+  }
+}

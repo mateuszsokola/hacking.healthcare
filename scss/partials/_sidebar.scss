@@ -55,6 +55,16 @@ $background-image: url("assets/pattern.png");
     // shape
     display: inline-block;
     padding: 5px 0;
+
+    &:focus,
+    &:hover {
+      color: darken($link-default-color, 25%);
+    }
+
+    &.follow-link {
+      margin-right: 15px;
+      font-size: 24px;
+    }
   }
 
   p,
@@ -99,6 +109,17 @@ $background-image: url("assets/pattern.png");
 
     .container > .col {
       min-height: auto;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+  .sidebar  {
+    .container > .col {
+      &:nth-child(3),
+      &:last-child {
+        min-height: auto;
+      }
     }
   }
 }

@@ -25,7 +25,6 @@ $section-padding-bottom: 140px;
   // shape
   @include background-size(cover);
   overflow: hidden;
-  margin-top: $height;
   width: 100%;
   // font
   font-family: $text-font;
@@ -40,29 +39,59 @@ $section-padding-bottom: 140px;
 
   .container {
     // shape
-    padding-top: $section-padding-top;
-    padding-bottom: $section-padding-bottom;
+    padding-top: 40px;
+    padding-bottom: 40px;
     // font
     text-align: center;
   }
 
   .button {
-    margin: 0 20px;
+    margin: 10px 20px;
   }
 
   h1 {
     // shape
-    margin-bottom: 120px;
+    margin-bottom: 30px;
     // font
-    font-size: $headline-size;
-    line-height: $headline-height;
+    font-size: (( $headline-size / 1.2 ));
+    line-height: (( $headline-height / 1.3 ));
     font-weight: $headline-weight;
 
     .headline {
       // shape
       display: block;
+      margin-bottom: 5px;
       // font
-      font-size: $large-headline-size;
+      font-size: (( $large-headline-size / 1.2));
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .home-page {
+    margin-top: $height;
+
+    .container {
+      // shape
+      padding-top: $section-padding-top;
+      padding-bottom: $section-padding-bottom;
+      // font
+      text-align: center;
+    }
+
+    h1 {
+      // shape
+      margin-bottom: 120px;
+      // font
+      font-size: $headline-size;
+      line-height: $headline-height;
+
+      .headline {
+        // shape
+        display: block;
+        // font
+        font-size: $large-headline-size;
+      }
     }
   }
 }
