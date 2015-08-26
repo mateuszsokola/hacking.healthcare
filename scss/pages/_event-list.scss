@@ -1,0 +1,63 @@
+//
+// Event List
+// --------------------------------------------------
+
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+// Links
+$text-font: 'Raleway', sans-serif;
+$text-size: 14px;
+$text-color: #fff;
+$text-transform: uppercase;
+$text-weight: normal;
+$text-decoration: none;
+$text-align: center;
+$line-height: 24px;
+
+// City
+$main-text-size: 18px;
+
+
+.event-list {
+
+  .event-tile {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    @include background-size(cover);
+
+    .event-tile-inner {
+      // shape
+      position: absolute;
+      background: rgba(0,0,0,.5); // fade background
+      width: 100%;
+      // vertical align
+      height: 100%;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      // font
+      font-family: $text-font;
+      font-size: $text-size;
+      color: $text-color;
+      text-transform: $text-transform;
+      text-decoration: $text-decoration;
+      line-height: $line-height;
+      text-align: $text-align;
+
+      .valign {
+        display: block;
+      }
+      .city,
+      .date {
+        display: block;
+      }
+
+      .city {
+        font-size: $main-text-size;
+      }
+    }
+  }
+}

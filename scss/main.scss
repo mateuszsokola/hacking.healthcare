@@ -6,7 +6,7 @@ Author URI: http://hacking.healthcare/
 */
 
 //
-// The Main Style
+// Main Style
 // --------------------------------------------------
 
 // Setup
@@ -32,6 +32,7 @@ Author URI: http://hacking.healthcare/
 
 // Pages
 @import 'pages/_home';
+@import 'pages/_event-list';
 
 // Theme
 @import '_theme';

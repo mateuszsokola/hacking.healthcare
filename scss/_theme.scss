@@ -10,17 +10,34 @@ html {
 body {
   font-family: $default-text-font;
   font-size: $default-text-size;
-  height: 100%;
+  color: $default-text-color;
+  line-height: $default-line-height;
   min-width: $breakpoint-smartphone;
+  height: 100%;
 }
 
 div {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: $header-text-font;
+  font-weight: $header-text-weight;
+  color: $header-text-color;
+}
+
+h1 {
+  line-height: $header-line-height;
+  font-size: $header-text-size;
+}
+
 .container {
   max-width: $breakpoint-large;
   margin: 0 auto;
+  padding: 5px 10px;
   @include clearfix;
 
   > .col {
@@ -70,4 +87,21 @@ div {
   width: $logo-width;
   text-indent: -9999px;
   display: block;
+}
+
+.global-content {
+  margin-top: 0;
+  padding: 15px 0 20px;
+
+  h1:first-child {
+    margin-top: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 60px;
+  }
+}
+
+.valign {
+  @include vertical-align;
 }

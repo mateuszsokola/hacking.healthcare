@@ -56,6 +56,7 @@ $section-padding-bottom: 140px;
     font-size: (( $headline-size / 1.2 ));
     line-height: (( $headline-height / 1.3 ));
     font-weight: $headline-weight;
+    color: $text-color;
 
     .headline {
       // shape
