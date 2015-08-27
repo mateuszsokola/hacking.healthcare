@@ -14,50 +14,82 @@ $text-transform: uppercase;
 $text-weight: normal;
 $text-decoration: none;
 $text-align: center;
-$line-height: 24px;
+$line-height: 30px;
 
 // City
-$main-text-size: 18px;
+$main-text-size: 20px;
 
+.tile-list {
+  // shape
+  margin: 0 -5px 0 -5px;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
 
-.event-list {
-
-  .event-tile {
+  > li {
     position: relative;
-    height: 120px;
-    width: 100%;
-    @include background-size(cover);
+    padding: 5px;
+    float: left;
+    width: 50%;
 
-    .event-tile-inner {
-      // shape
-      position: absolute;
-      background: rgba(0,0,0,.5); // fade background
+    @media (min-width: $breakpoint-smartphone) {
       width: 100%;
-      // vertical align
-      height: 100%;
-      -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      // font
-      font-family: $text-font;
-      font-size: $text-size;
-      color: $text-color;
-      text-transform: $text-transform;
-      text-decoration: $text-decoration;
-      line-height: $line-height;
-      text-align: $text-align;
+    }
 
-      .valign {
-        display: block;
-      }
-      .city,
-      .date {
-        display: block;
-      }
+    @media (min-width: $breakpoint-tablet) {
+      width: 100%;
+    }
 
-      .city {
-        font-size: $main-text-size;
-      }
+    @media (min-width: $breakpoint-desktop) {
+      width: 50%;
+    }
+
+    &.wide {
+      width: 100% !important;
+    }
+  }
+}
+
+
+.event {
+  @include background-size(cover);
+  position: relative;
+  height: 180px;
+
+  .event-inner {
+    // shape
+    position: absolute;
+    background: rgba(0,0,0,.5); // fade background
+    height: 100%;
+    width: 100%;
+    // vertical align
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    // font
+    font-family: $text-font;
+    font-size: $text-size;
+    color: $text-color;
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+    line-height: $line-height;
+    text-align: $text-align;
+
+    &.inner-blue {
+      background: rgba(0,100,160,.5);
+    }
+
+    .valign {
+      display: block;
+      padding: 10px;
+    }
+    .city,
+    .date {
+      display: block;
+    }
+
+    .city {
+      font-size: $main-text-size;
     }
   }
 }
