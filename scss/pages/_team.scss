@@ -1,0 +1,88 @@
+//
+// Member List
+// --------------------------------------------------
+
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+// Text, Links etc.
+$text-size: 16px;
+$text-align: left;
+$line-height: 24px;
+
+$link-color: #a4a4a4;
+$link-decoration: none;
+
+.member-list {
+  // shape
+  margin: 10px -10px 20px;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+
+  > li {
+    position: relative;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+
+    @media (min-width: $breakpoint-smartphone) {
+      width: 100%;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 50%;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 25%;
+    }
+  }
+}
+
+.member {
+  .photo {
+    max-height: 290px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .first-name,
+  .last-name {
+    display: block;
+    font-size: $text-size;
+    text-align: $text-align;
+    line-height: $line-height;
+  }
+
+  .member-links {
+    margin: 5px -5px;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+    @include clearfix;
+
+    > li  {
+      float: left;
+      margin: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        text-decoration: $link-decoration;
+        color: $link-color;
+        font-size: 20px;
+      }
+    }
+  }
+}

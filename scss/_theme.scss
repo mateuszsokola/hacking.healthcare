@@ -106,3 +106,7 @@ h1 {
 .valign {
   @include vertical-align;
 }
+
+.text-center {
+  text-align: center;
+}
