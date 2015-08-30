@@ -28,10 +28,12 @@ Author URI: http://hacking.healthcare/
 // Partials
 @import 'partials/_global-nav';
 @import 'partials/_sidebar';
+@import 'partials/_forms';
 @import 'partials/_footer';
 
 // Pages
 @import 'pages/_home';
+@import 'pages/_contact';
 @import 'pages/_event-list';
 @import 'pages/_team';
 
