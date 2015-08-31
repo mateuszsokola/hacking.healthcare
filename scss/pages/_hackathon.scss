@@ -1,0 +1,88 @@
+//
+// Hackathon page
+// --------------------------------------------------
+
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+// Splash
+$text-font: 'Raleway', sans-serif;
+$text-size: 18px;
+$text-color: #fff;
+$text-transform: uppercase;
+$text-weight: normal;
+$text-decoration: none;
+$text-align: center;
+$line-height: 24px;
+
+$headline-size: 32px;
+$headline-line-height: 40px;
+
+
+.hackathon-splash {
+  // shape
+  @include background-size(cover);
+  overflow: hidden;
+  width: 100%;
+  // font
+  font-family: $text-font;
+  font-size: 14px;
+  line-height: $line-height;
+  text-transform: $text-transform;
+  color: $text-color;
+
+  h1 {
+    // font
+    font-family: $text-font;
+    font-size: 20px;
+    color: $text-color;
+    line-height: 24px;
+    text-transform: $text-transform;
+    // shape
+    margin: 0;
+  }
+
+  .hackathon-splash-inner {
+    // shape
+    background: rgba(0, 0, 0, .5); // fade background
+  }
+
+  .container {
+    // shape
+    padding-top: 40px;
+    padding-bottom: 40px;
+    // font
+    text-align: center;
+  }
+}
+
+.hackathon-nav {
+  background: #fff;
+  height: 50px;
+  width: 100%;
+  @include box-shadow(1px 0 5px rgba(0,0,0,.25));
+
+  .menu-nav {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .hackathon-splash {
+    margin-top: $height;
+    font-size: $text-size;
+
+    h1 {
+      font-size: $headline-size;
+      line-height: $headline-line-height;
+    }
+
+    .container {
+      // shape
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+}
