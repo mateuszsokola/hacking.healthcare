@@ -68,11 +68,12 @@
     </div>
 </nav>
 
-<div class="global-content">
+<div class="global-content contact-page">
     <div class="container">
         <h1>Contact</h1>
+        <p class="info">Have a question about hackathons? Would you like to organize a hackathon in your city? Would you like to ask about something else? Just use this form!</p>
         <form action="" method="post">
-            <div class="field-wrapper">
+            <div class="field-wrapper error">
                 <label for="email">E-mail address</label>
                 <input
                     id="email"
@@ -80,9 +81,7 @@
                     type="email"
                     name="email"
                     placeholder="Enter your e-mail address here">
-                <span class="error">
-                    Raszyn, Sraszyn zajebana wieś, nie ma tam co pić! nie ma tam co jeść!
-                </span>
+                <span class="message"></span>
             </div>
             <div class="field-wrapper">
                 <label for="subject">Subject</label>
@@ -92,7 +91,7 @@
                     type="text"
                     name="subject"
                     placeholder="Enter subject here">
-                <span class="error"></span>
+                <span class="message"></span>
             </div>
             <div class="field-wrapper">
                 <label for="email">Your message</label>
@@ -101,7 +100,7 @@
                     class="field textarea-field"
                     rows="10"
                     ></textarea>
-                <span class="error">
+                <span class="message">
                 </span>
             </div>
 

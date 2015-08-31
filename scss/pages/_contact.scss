@@ -10,9 +10,16 @@ $text-size: 16px;
 $text-align: left;
 $line-height: 24px;
 
-$link-color: #a4a4a4;
-$link-decoration: none;
+$info-size: 14px;
+$info-color: #888;
 
-.contact-form {
+.contact-page {
+  padding-bottom: 80px !important;
 
+  .info {
+    max-width: 600px;
+    font-size: $info-size;
+    color: $info-color;
+    line-height: $line-height;
+  }
 }
