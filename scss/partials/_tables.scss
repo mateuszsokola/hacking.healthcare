@@ -1,0 +1,45 @@
+//
+// Tables
+// --------------------------------------------------
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+$thead-background: #f1f1f1;
+$tbody-background: #fafafa;
+$border-color: #c8c8c8;
+
+$text-size: 14px;
+
+// Base
+// --------------------------------------------------
+table {
+  font-size: $text-size;
+  margin-bottom: 60px;
+  width: 100%;
+
+  thead th,
+  tbody td {
+    padding: 15px 10px;
+  }
+
+  thead {
+    tr {
+      background: $thead-background;
+    }
+  }
+
+  tbody {
+    border-bottom: 1px solid $border-color;
+
+    tr {
+      border-top: 1px solid $border-color;
+      background: $tbody-background;
+
+      td:first-child {
+        text-align: center;
+        width: 15%;
+      }
+    }
+  }
+}

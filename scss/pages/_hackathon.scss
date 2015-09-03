@@ -58,14 +58,58 @@ $headline-line-height: 40px;
 }
 
 .hackathon-nav {
+  // default hidden
+  display: none;
+  // shape
   background: #fff;
   height: 50px;
   width: 100%;
   @include box-shadow(1px 0 5px rgba(0,0,0,.25));
 
   .menu-nav {
-    margin: 0;
+    // font
     font-size: 12px;
+    // shape
+    margin: 0;
+
+    .button {
+      // font
+      font-size: 12px;
+      // shape
+      padding: 3px 12px;
+      margin-top: 3px;
+    }
+  }
+}
+
+.hackathon-section {
+  line-height: $line-height;
+}
+
+.hackathon-location {
+
+  .container {
+    padding-bottom: 20px;
+
+    .col {
+      width: 100%;
+    }
+
+    .map {
+      max-width: 300px;
+      height: 200px;
+      background: #f0f0f0;
+    }
+
+    .location {
+      line-height: $line-height;
+      max-width: 400px;
+      padding: 10px 0;
+
+      .button {
+        margin-top: 30px;
+      }
+    }
   }
 }
 
@@ -83,6 +127,26 @@ $headline-line-height: 40px;
       // shape
       padding-top: 80px;
       padding-bottom: 80px;
+    }
+  }
+
+  .hackathon-nav {
+    display: block;
+  }
+
+
+  .hackathon-location {
+    .container .location {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+
+  .hackathon-location {
+    .container .location {
+      max-width: 660px;
     }
   }
 }
