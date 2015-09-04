@@ -39,7 +39,7 @@ h1 {
 .container {
   max-width: $breakpoint-large;
   margin: 0 auto;
-  padding: 5px 10px;
+  padding: 5px 20px;
   @include clearfix;
 
   > .col {
