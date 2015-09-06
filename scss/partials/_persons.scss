@@ -6,6 +6,10 @@
 
 // Config
 // --------------------------------------------------
+$text-size: 16px;
+$text-align: left;
+$line-height: 24px;
+
 $link-color: #a4a4a4;
 $link-decoration: none;
 
@@ -35,6 +39,14 @@ $link-decoration: none;
       width: 25%;
     }
   }
+}
+
+.person-first-name,
+.person-last-name {
+  display: block;
+  font-size: $text-size;
+  text-align: $text-align;
+  line-height: $line-height;
 }
 
 .person-photo {

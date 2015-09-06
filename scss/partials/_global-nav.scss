@@ -54,6 +54,17 @@ $bar-height: 2px;
     @include clearfix;
   }
 
+  .global-logo {
+    background: url($logo-url-png);
+    // TODO: Add it as an inline svg [Mateusz]
+    background: url($logo-url-svg), none;
+    background-size: $logo-width $logo-height;
+    height: $logo-height;
+    width: $logo-width;
+    text-indent: -9999px;
+    display: block;
+  }
+
   .menu-toggle {
     position: relative;
     float: right;

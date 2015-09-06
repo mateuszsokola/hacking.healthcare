@@ -18,10 +18,11 @@ $headline-height: 50px;
 $headline-weight: normal;
 $large-headline-size: 32px;
 
+// TODO: refactor [Mateusz]
 $section-padding-top: 120px;
 $section-padding-bottom: 140px;
 
-.home-page {
+.splash {
   // shape
   @include background-size(cover);
   overflow: hidden;
@@ -32,7 +33,7 @@ $section-padding-bottom: 140px;
   line-height: $text-height;
   color: $text-color;
 
-  .home-page-inner {
+  .inner-splash {
     // shape
     background: rgba(0,0,0,.5); // fade background
   }
@@ -45,6 +46,7 @@ $section-padding-bottom: 140px;
     text-align: center;
   }
 
+  // TODO: refactor [Mateusz]
   .button {
     margin: 10px 20px;
   }
@@ -58,6 +60,7 @@ $section-padding-bottom: 140px;
     font-weight: $headline-weight;
     color: $text-color;
 
+    // TODO: refactor [Mateusz]
     .headline {
       // shape
       display: block;
@@ -69,7 +72,7 @@ $section-padding-bottom: 140px;
 }
 
 @media (min-width: $breakpoint-desktop) {
-  .home-page {
+  .splash {
     margin-top: $height;
 
     .container {
@@ -87,6 +90,7 @@ $section-padding-bottom: 140px;
       font-size: $headline-size;
       line-height: $headline-height;
 
+      // TODO: refactor [Mateusz]
       .headline {
         // shape
         display: block;

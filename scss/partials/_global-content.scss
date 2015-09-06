@@ -1,0 +1,21 @@
+//
+// Global Content
+// --------------------------------------------------
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+
+
+.global-content {
+  margin-top: 0;
+  padding: 15px 0 20px;
+
+  h1:first-child {
+    margin-top: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 60px;
+  }
+}

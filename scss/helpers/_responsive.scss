@@ -1,0 +1,28 @@
+//
+// Responsive
+// --------------------------------------------------
+@import '../_config';
+
+.breakline-below-desktop {
+  display: block;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: inline-block;
+  }
+}
+
+.visible-above-desktop {
+  display: none;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
+
+.visible-below-desktop {
+  display: none;
+
+  @media (max-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
