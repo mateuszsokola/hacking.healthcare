@@ -1,0 +1,54 @@
+//
+// Sponsors
+// --------------------------------------------------
+
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+$border-color: #636363;
+
+.partner-list {
+  // shape
+  margin: 10px -10px 20px;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+
+  > li {
+    position: relative;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+
+    > a {
+      display: block;
+      border: 1px solid $border-color;
+      height: 150px;
+      width: 100%;
+      max-width: 225px;
+      overflow: hidden;
+      padding: 0 5px;
+      margin: 5px auto;
+
+      > img {
+        max-width: 100%;
+        height: auto;
+        @include vertical-align;
+      }
+    }
+
+    @media (min-width: $breakpoint-smartphone) {
+      width: 100%;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 50%;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 25%;
+    }
+  }
+}
