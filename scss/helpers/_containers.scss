@@ -15,7 +15,7 @@ $col-padding-right: 10px;
 // --------------------------------------------------
 .container {
   max-width: $breakpoint-tablet;
-  min-width: $breakpoint-minimum;
+  min-width: $brand-website-minimal-width;
   margin-left: auto;
   margin-right: auto;
   padding-left: $container-padding-left;

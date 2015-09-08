@@ -2,18 +2,31 @@
 // Global Config
 // --------------------------------------------------
 
+//  Brand
+// --------------------------------------------------
+$brand-website-minimal-width: 320px;
+
+$brand-regular-font: 'Open Sans', sans-serif;
+$brand-special-font: 'Raleway', sans-serif;
+
+$brand-dark-text: #404040;
+$brand-bright-text: #fff;
+
+$brand-prior-text: $brand-dark-text;
+$brand-regular-text: #888;
+
 //  Typography
 // --------------------------------------------------
-$default-text-font: 'Open Sans', sans-serif;
-$default-text-size: 16px;
+$default-text-font: $brand-regular-font;
+$default-text-color: $brand-regular-text;
+$default-text-size: 14px;
 $default-line-height: 20px;
-$default-text-color: #414141;
 
-$header-text-font: 'Open Sans', sans-serif;
-$header-text-size: 24px;
-$header-text-color: #414141;
-$header-text-weight: normal;
-$header-line-height: 38px;
+$default-heading-font: $brand-regular-font;
+$default-heading-color: $brand-dark-text;
+$default-heading-weight: normal;
+$default-heading-size: 24px;
+$default-heading-line-height: 34px;
 
 //  Logo
 // --------------------------------------------------
@@ -22,10 +35,8 @@ $logo-url-svg: "assets/logo.svg";
 $logo-width  : 234px;
 $logo-height : 50px;
 
-
 //  Breakpoints
 // --------------------------------------------------
-$breakpoint-minimum: 320px;
 $breakpoint-smartphone: 490px;
 $breakpoint-tablet: 720px;
 $breakpoint-desktop: 980px;

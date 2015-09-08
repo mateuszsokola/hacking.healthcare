@@ -8,23 +8,18 @@
 
 // Config
 // --------------------------------------------------
-// Text, Links etc.
-$text-font: 'Raleway', sans-serif;
+$text-font: $brand-special-font;
 $text-size: 14px;
-$text-color: #404040;
+$text-color: $brand-dark-text;
 $text-transform: uppercase;
 $text-weight: normal;
 $line-height: 24px;
 
-// Link default
 $link-default-transform: none;
-
-// Link active
 $link-active-transform: underline;
 
-// Navbar
-$bg-color: #fff;
-$border-color: #e0e0e0;
+$navbar-background-color: #fff;
+$navbar-border-color: #e0e0e0;
 
 // Bars
 $bar-color: #404040;
@@ -36,7 +31,7 @@ $bar-height: 2px;
 
 .global-nav {
   position: static;
-  background: $bg-color;
+  background: $navbar-background-color;
   height: $global-nav-height;
   width: 100%;
   @include box-shadow(1px 0 5px rgba(0,0,0,.25));
@@ -114,8 +109,8 @@ $bar-height: 2px;
 
   > li {
     position: relative;
-    background: $bg-color;
-    border-top: 1px solid $border-color;
+    background: $navbar-background-color;
+    border-top: 1px solid $navbar-border-color;
     width: 100%;
 
     > a,
@@ -184,12 +179,12 @@ $bar-height: 2px;
     // shape
     min-width: 160px;
     list-style: none;
-    background-color: $bg-color;
+    background-color: $navbar-background-color;
     background-clip: padding-box;
 
     // Links within the dropdown menu
     > li {
-      border-top: 1px solid $border-color;
+      border-top: 1px solid $navbar-border-color;
 
       > a,
       > .link {

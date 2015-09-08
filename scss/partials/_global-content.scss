@@ -3,19 +3,18 @@
 // --------------------------------------------------
 @import '../_config';
 
-// Config
+// Base
 // --------------------------------------------------
-
-
 .global-content {
+  padding-bottom: 120px;
+  padding-top: 20px;
   margin-top: 0;
-  padding: 15px 0 20px;
 
   h1:first-child {
     margin-top: 0;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    margin-top: 60px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: $global-nav-height;
   }
 }

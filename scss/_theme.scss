@@ -12,7 +12,7 @@ body {
   font-size: $default-text-size;
   color: $default-text-color;
   line-height: $default-line-height;
-  min-width: $breakpoint-minimum;
+  min-width: $brand-website-minimal-width;
   height: 100%;
 }
 
@@ -26,12 +26,20 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $header-text-font;
-  font-weight: $header-text-weight;
-  color: $header-text-color;
+  font-family: $default-heading-font;
+  font-weight: $default-heading-weight;
+  color: $default-heading-color;
 }
 
 h1 {
-  line-height: $header-line-height;
-  font-size: $header-text-size;
+  line-height: $default-heading-line-height;
+  font-size: $default-heading-size;
+}
+
+.small-title {
+  // shape
+  margin-top: 20px;
+  display: block;
+  // font
+  color: $brand-prior-text;
 }
