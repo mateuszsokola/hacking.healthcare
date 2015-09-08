@@ -1,0 +1,28 @@
+//
+// Splashes
+// --------------------------------------------------
+@import '../_config';
+
+// Mixins
+@import '../mixins/_background-size';
+
+// Config
+// --------------------------------------------------
+
+.splash {
+  // shape
+  @include background-size(cover);
+  overflow: hidden;
+  width: 100%;
+
+  .inner-splash {
+    // shape
+    background: rgba(0,0,0,.5); // fade background
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .splash {
+    margin-top: $global-nav-height;
+  }
+}

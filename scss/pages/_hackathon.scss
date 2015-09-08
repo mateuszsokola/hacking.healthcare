@@ -6,7 +6,6 @@
 
 // Config
 // --------------------------------------------------
-// Splash
 $text-font: 'Raleway', sans-serif;
 $text-size: 18px;
 $text-color: #fff;
@@ -184,7 +183,7 @@ $headline-line-height: 40px;
 
 @media (min-width: $breakpoint-desktop) {
   .hackathon-splash {
-    margin-top: $height;
+    margin-top: $global-nav-height;
     font-size: $text-size;
 
     h1 {

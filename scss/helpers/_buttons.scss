@@ -3,6 +3,7 @@
 // @see bootstrap-sass
 // --------------------------------------------------
 @import '../_config';
+
 // required mixins
 @import '../mixins/_basics';
 @import '../mixins/_buttons';
@@ -64,7 +65,7 @@ $primary-border-color: #c90000;
 
   &,
   &:active,
-  &.active {
+  &.active-button {
     &:focus,
     &.focus {
       @include tab-focus;
@@ -77,7 +78,7 @@ $primary-border-color: #c90000;
     color: $default-text-color;
   }
 
-  &.primary {
+  &.primary-button {
     @include button-variant(
       $primary-text-color,
       $primary-background,

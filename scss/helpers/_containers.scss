@@ -3,26 +3,40 @@
 // --------------------------------------------------
 @import '../_config';
 
+// Config
+// --------------------------------------------------
+$container-padding-left: 20px;
+$container-padding-right: 20px;
+
+$col-padding-left: 10px;
+$col-padding-right: 10px;
+
+// Base
+// --------------------------------------------------
 .container {
-  max-width: $breakpoint-large;
-  margin: 0 auto;
-  padding: 5px 20px;
+  max-width: $breakpoint-tablet;
+  min-width: $breakpoint-minimum;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding-left;
+  padding-right: $container-padding-right;
   @include clearfix;
 
   > .col {
     position: relative;
-    min-height: 1px;
     float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 25%;
-  }
+    min-height: 1px;
+    padding-left: $col-padding-left;
+    padding-right: $col-padding-right;
+    width: 100%;
 
-  @media (min-width: $breakpoint-smartphone) {
-    max-width: $breakpoint-smartphone;
+    &:first-child {
+      margin-left: -($col-padding-left);
+    }
 
-    > .col {
-      width: 100%;
+    &:last-child,
+    &.about-col {
+      margin-right: -($col-padding-right);
     }
   }
 
@@ -40,9 +54,5 @@
     > .col {
       width: 25%;
     }
-  }
-
-  @media (min-width: $breakpoint-large) {
-    max-width: $breakpoint-large;
   }
 }

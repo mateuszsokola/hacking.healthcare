@@ -1,101 +1,90 @@
 //
 // Homepage
 // --------------------------------------------------
-
 @import '../_config';
+
 // Mixins
 @import '../mixins/_background-size';
 
 // Config
 // --------------------------------------------------
-$text-font: 'Open Sans', sans-serif;
-$text-size: 12px;
-$text-height: 24px;
+$text-align: center;
 $text-color: #fff;
+$text-weight: normal;
 
-$headline-size: 24px;
-$headline-height: 50px;
-$headline-weight: normal;
-$large-headline-size: 32px;
+$mobile-padding-top: 60px;
+$mobile-padding-bottom: 60px;
+$mobile-heading-margin-bottom: 60px;
+$mobile-heading-size: 16px;
+$mobile-heading-line-height: 24px;
+$mobile-headline-size: 24px;
+$mobile-headline-line-height: 32px;
 
-// TODO: refactor [Mateusz]
-$section-padding-top: 120px;
-$section-padding-bottom: 140px;
+$desktop-padding-top: 120px;
+$desktop-padding-bottom: 120px;
+$desktop-heading-margin-bottom: 120px;
+$desktop-heading-size: 24px;
+$desktop-heading-line-height: 42px;
+$desktop-headline-size: 32px;
+$desktop-headline-line-height: 42px;
 
 .splash {
-  // shape
-  @include background-size(cover);
-  overflow: hidden;
-  width: 100%;
   // font
-  font-family: $text-font;
-  font-size: $text-size;
-  line-height: $text-height;
+  text-align: $text-align;
   color: $text-color;
-
-  .inner-splash {
-    // shape
-    background: rgba(0,0,0,.5); // fade background
-  }
 
   .container {
     // shape
-    padding-top: 40px;
-    padding-bottom: 40px;
-    // font
-    text-align: center;
+    padding-top: $mobile-padding-top;
+    padding-bottom: $mobile-padding-bottom;
   }
 
-  // TODO: refactor [Mateusz]
   .button {
+    // shape
     margin: 10px 20px;
   }
 
   h1 {
     // shape
-    margin-bottom: 30px;
+    margin-bottom: $mobile-heading-margin-bottom;
     // font
-    font-size: (( $headline-size / 1.2 ));
-    line-height: (( $headline-height / 1.3 ));
-    font-weight: $headline-weight;
+    font-size: $mobile-heading-size;
+    line-height: $mobile-heading-line-height;
+    font-weight: $text-weight;
     color: $text-color;
 
-    // TODO: refactor [Mateusz]
     .headline {
       // shape
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       // font
-      font-size: (( $large-headline-size / 1.2));
+      font-size: $mobile-headline-size;
+      line-height: $mobile-headline-line-height;
     }
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-smartphone) {
   .splash {
-    margin-top: $height;
-
     .container {
       // shape
-      padding-top: $section-padding-top;
-      padding-bottom: $section-padding-bottom;
-      // font
-      text-align: center;
+      padding-top: $desktop-padding-top;
+      padding-bottom: $desktop-padding-bottom;
     }
 
     h1 {
       // shape
-      margin-bottom: 120px;
+      margin-bottom: $desktop-heading-margin-bottom;
       // font
-      font-size: $headline-size;
-      line-height: $headline-height;
+      font-size: $desktop-heading-size;
+      line-height: $desktop-heading-line-height;
 
-      // TODO: refactor [Mateusz]
       .headline {
         // shape
         display: block;
         // font
-        font-size: $large-headline-size;
+        font-size: $desktop-headline-size;
+        line-height: $desktop-headline-line-height;
       }
     }
   }

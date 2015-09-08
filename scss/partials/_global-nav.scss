@@ -24,11 +24,7 @@ $link-active-transform: underline;
 
 // Navbar
 $bg-color: #fff;
-$height: 60px;
 $border-color: #e0e0e0;
-
-// Breakpoints
-$mobile-breakpoint: 720px;
 
 // Bars
 $bar-color: #404040;
@@ -40,9 +36,8 @@ $bar-height: 2px;
 
 .global-nav {
   position: static;
-  min-width: $breakpoint-smartphone;
   background: $bg-color;
-  height: $height;
+  height: $global-nav-height;
   width: 100%;
   @include box-shadow(1px 0 5px rgba(0,0,0,.25));
 
@@ -230,7 +225,7 @@ $bar-height: 2px;
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@media (min-width: $breakpoint-tablet) {
 
   .global-nav {
     position: fixed;

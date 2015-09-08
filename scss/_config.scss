@@ -25,9 +25,14 @@ $logo-height : 50px;
 
 //  Breakpoints
 // --------------------------------------------------
-$breakpoint-smartphone: 320px;
-$breakpoint-tablet: 490px;
-$breakpoint-desktop: 720px;
+$breakpoint-minimum: 320px;
+$breakpoint-smartphone: 490px;
+$breakpoint-tablet: 720px;
+$breakpoint-desktop: 980px;
+
+// TODO debug [Mateusz]
 $breakpoint-large: 980px;
 
-
+//  Global Navbar
+// --------------------------------------------------
+$global-nav-height: 60px;

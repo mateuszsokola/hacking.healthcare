@@ -28,7 +28,6 @@ $link-transform: none;
 $link-line-height: 16px;
 $link-default-color: #a4a4a4;
 
-
 // Sidebar
 $background-color: #202020;;
 $background-image: url("assets/pattern.png");
@@ -36,6 +35,7 @@ $background-image: url("assets/pattern.png");
 // Base
 // --------------------------------------------------
 .sidebar {
+  // shape
   background: $background-color $background-image;
   @include box-shadow(inset 0 2px 5px rgba(0, 0, 0, 0.3));
   // font
@@ -43,6 +43,7 @@ $background-image: url("assets/pattern.png");
   color: $text-color;
   text-transform: $text-transform;
   line-height: $line-height;
+  text-align: center;
 
   a {
     // font
@@ -68,14 +69,39 @@ $background-image: url("assets/pattern.png");
   }
 
   p,
-  .contact-link {
+  .imprint-link {
     margin: 15px 0;
   }
 
   .container > .col {
     // shape
-    padding: 20px 10px;
-    min-height: 265px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: $breakpoint-smartphone) {
+      // shape
+      overflow: hidden;
+      width: 50%;
+
+      &.twitter-col {
+        height: 265px;
+      }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      // font
+      text-align: left;
+      // shape
+      width: 25%;
+
+      &.follow-col {
+        width: 15%;
+      }
+      &.twitter-col,
+      &.about-col {
+        width: 30%;
+      }
+    }
   }
 
   .title {
@@ -99,27 +125,5 @@ $background-image: url("assets/pattern.png");
 
   > li {
     padding: 3px 0;
-  }
-}
-
-@media (min-width: $breakpoint-smartphone) and (max-width: $breakpoint-tablet) {
-  .sidebar  {
-    text-align: center;
-    padding-bottom: 20px;
-
-    .container > .col {
-      min-height: auto;
-    }
-  }
-}
-
-@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
-  .sidebar  {
-    .container > .col {
-      &:nth-child(3),
-      &:last-child {
-        min-height: auto;
-      }
-    }
   }
 }
