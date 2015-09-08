@@ -36,6 +36,16 @@ h1 {
   font-size: $default-heading-size;
 }
 
+a {
+  color: $brand-regular-link;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: $brand-regular-link-hover;
+  }
+}
+
 .small-title {
   // shape
   margin-top: 20px;

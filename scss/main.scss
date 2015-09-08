@@ -23,6 +23,7 @@ Author URI: http://hacking.healthcare/
 @import 'helpers/_containers';
 @import 'helpers/_icons';
 @import 'helpers/_buttons';
+@import 'helpers/_persons';
 @import 'helpers/_screen-readers';
 @import 'helpers/_responsive';
 @import 'helpers/_text';
@@ -32,10 +33,11 @@ Author URI: http://hacking.healthcare/
 @import 'partials/_global-nav';
 @import 'partials/_eventbrite';
 @import 'partials/_sidebar';
-@import 'partials/_persons';
+@import 'partials/_person-lists';
 @import 'partials/_forms';
 @import 'partials/_footer';
 @import 'partials/_sponsors';
+@import 'partials/_social-links';
 @import 'partials/_splashes';
 @import 'partials/_tables';
 
@@ -44,7 +46,6 @@ Author URI: http://hacking.healthcare/
 @import 'pages/_contact';
 @import 'pages/_listing';
 @import 'pages/_hackathon';
-@import 'pages/_team';
 
 // Theme
 @import '_theme';

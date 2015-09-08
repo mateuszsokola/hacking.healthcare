@@ -21,19 +21,20 @@ $link-active-transform: underline;
 $navbar-background-color: #fff;
 $navbar-border-color: #e0e0e0;
 
-// Bars
-$bar-color: #404040;
-$bar-width: 22px;
-$bar-height: 2px;
+// Menu Icon Bars
+$menu-icon-bar-color: #404040;
+$menu-icon-bar-width: 22px;
+$menu-icon-bar-height: 2px;
 
 // Base
 // --------------------------------------------------
 
 .global-nav {
-  position: static;
+  position: relative;
   background: $navbar-background-color;
   height: $global-nav-height;
   width: 100%;
+  z-index: 1;
   @include box-shadow(1px 0 5px rgba(0,0,0,.25));
 
   .container {
@@ -71,9 +72,9 @@ $bar-height: 2px;
 
     // Bars
     .icon-bar {
-      background: $bar-color;
-      width: $bar-width;
-      height: $bar-height;
+      background: $menu-icon-bar-color;
+      width: $menu-icon-bar-width;
+      height: $menu-icon-bar-height;
       border-radius: 1px;
       display: block;
     }
@@ -224,7 +225,6 @@ $bar-height: 2px;
 
   .global-nav {
     position: fixed;
-    z-index: 1;
     top: 0;
 
     .global-nav-header {

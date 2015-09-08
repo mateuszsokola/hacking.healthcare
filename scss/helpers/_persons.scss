@@ -1,0 +1,31 @@
+//
+// Persons Helpers
+// --------------------------------------------------
+@import '../_config';
+
+// Base
+// --------------------------------------------------
+.first-name-person,
+.last-name-person,
+.photo-person {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 185px;
+}
+
+.first-name-person,
+.last-name-person {
+  display: block;
+  color: $brand-dark-text;
+  font-size: 16px;
+  text-align: center;
+}
+
+.photo-person {
+  max-height: 185px;
+  height: auto;
+  width: 100%;
+  border-radius: 185px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
