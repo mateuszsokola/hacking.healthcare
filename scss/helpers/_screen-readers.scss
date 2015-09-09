@@ -1,12 +1,10 @@
 //
-// Helpers
+// Screen readers
 // --------------------------------------------------
 
-
-// Screen Readers Only
-
-// TODO: Check is it the proper notation for the BEM methodology [Mateusz]
-.sr-only {
+// Base
+// --------------------------------------------------
+.only-screen-readers {
   position: absolute;
   width: 1px;
   height: 1px;

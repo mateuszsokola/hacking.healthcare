@@ -1,7 +1,16 @@
 //
-// Persons Helpers
+// Persons helpers
 // --------------------------------------------------
 @import '../_config';
+
+// Config
+// --------------------------------------------------
+$text-color: $brand-dark-text;
+$text-size: 16px;
+
+$max-width: 185px;
+$max-height: 185px;
+$border-radius: $max-width;
 
 // Base
 // --------------------------------------------------
@@ -10,22 +19,22 @@
 .photo-person {
   margin-left: auto;
   margin-right: auto;
-  max-width: 185px;
+  max-width: $max-width;
 }
 
 .first-name-person,
 .last-name-person {
   display: block;
-  color: $brand-dark-text;
-  font-size: 16px;
+  color: $text-color;
+  font-size: $text-size;
   text-align: center;
 }
 
 .photo-person {
-  max-height: 185px;
+  max-height: $max-height;
   height: auto;
   width: 100%;
-  border-radius: 185px;
+  border-radius: $border-radius;
   overflow: hidden;
   margin-bottom: 10px;
 }
