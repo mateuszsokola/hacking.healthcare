@@ -7,35 +7,36 @@
 // Config
 // --------------------------------------------------
 $text-size: $default-text-size;
-$text-color: $default-text-color;
+$text-color: $brand-dark-text;
+$line-height: $default-line-height;
 
-$input-text-size: 14px;
-$input-placeholder-color: #a4a4a4;
-$input-border-color: #a4a4a4;
-$input-border-radius: 10px;
+$background-color: $brand-bright-text;
+$placeholder-color: $brand-regular-text;
+$border-color: $brand-regular-text;
+$border-radius: 10px;
 
-$focus-color: #00aeff;
-
-$error-color: #b80000;
-$error-size: 14px;
+$focus-color: $brand-blue;
+$error-color: $brand-red;
 
 label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin: 5px 5px 8px;
+  // font
+  color: $text-color;
 }
 
 .field-wrapper {
   margin: 10px 0;
 
-  &.error {
+  &.invalid-field {
     label,
-    .field,
-    .message {
+    .input-field,
+    .message-field {
       color: $error-color;
     }
 
-    .field {
+    .input-field {
       border-color: $error-color;
 
       &:focus {
@@ -46,63 +47,40 @@ label {
   }
 }
 
-.field {
-  //font
-  font-size: $input-text-size;
-  color: $text-color;
-  line-height: 20px;
-  // shape
-  display: block;
+.input-field {
   max-width: 490px;
-  width: 100%;
-  height: 34px;
-  padding: 5px 10px;
-  background-color: #fff;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid $input-border-color;
-  border-radius: $input-border-radius;
-  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-  // animations
-  -webkit-transition: border-color ease-in-out .15,
-                    box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15,
-              box-shadow ease-in-out .15s;
-
-  // Customize the `:focus` state to imitate native WebKit styles.
-  &:focus {
-    border-color: $focus-color;
-    outline: 0;
-    @include box-shadow(0 0 8px $focus-color);
-  }
-
-  // Placeholder
-  &::-moz-placeholder {
-    // Firefox
-    color: $input-placeholder-color;
-    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
-  }
-
-  &:-ms-input-placeholder {
-    // Internet Explorer 10+
-    color: $input-placeholder-color;
-  }
-
-  &::-webkit-input-placeholder {
-    // Safari and Chrome
-    color: $input-placeholder-color;
-  }
+  height: 28px;
+  @include form-field(
+    $text-size,
+    $text-color,
+    $line-height,
+    $background-color,
+    $border-color,
+    $border-radius,
+    $focus-color,
+    $placeholder-color
+  );
 }
 
 .textarea-field {
   max-width: 640px;
   height: auto;
+  @include form-field(
+    $text-size,
+    $text-color,
+    $line-height,
+    $background-color,
+    $border-color,
+    $border-radius,
+    $focus-color,
+    $placeholder-color
+  );
 }
 
-.message {
+// TODO: change name, it's ambiguous [Mateusz]
+.message-field {
   // shape
   display: block;
   margin: 5px;
   min-height: 18px;
-  // font
-  font-size: $error-size;
 }

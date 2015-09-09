@@ -1,7 +1,10 @@
 //
 // Text
 // --------------------------------------------------
+@import '../_config';
 
+// Base
+// --------------------------------------------------
 .valign {
   @include vertical-align;
 }
@@ -10,3 +13,6 @@
   text-align: center;
 }
 
+.info-text {
+  max-width: 600px;
+}

@@ -8,8 +8,8 @@
 $container-padding-left: 20px;
 $container-padding-right: 20px;
 
-$col-padding-left: 10px;
-$col-padding-right: 10px;
+$column-padding-left: 10px;
+$column-padding-right: 10px;
 
 // Base
 // --------------------------------------------------
@@ -26,17 +26,17 @@ $col-padding-right: 10px;
     position: relative;
     float: left;
     min-height: 1px;
-    padding-left: $col-padding-left;
-    padding-right: $col-padding-right;
+    padding-left: $column-padding-left;
+    padding-right: $column-padding-right;
     width: 100%;
 
     &:first-child {
-      margin-left: -($col-padding-left);
+      margin-left: -($column-padding-left);
     }
 
     &:last-child,
     &.about-col {
-      margin-right: -($col-padding-right);
+      margin-right: -($column-padding-right);
     }
   }
 
