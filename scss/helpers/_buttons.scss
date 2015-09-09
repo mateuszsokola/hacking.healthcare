@@ -10,24 +10,28 @@
 
 // Config
 // --------------------------------------------------
-$default-text-font: 'Raleway', sans-serif;;
-$default-text-size: 14px;
-$default-text-height: 18px;
-$default-text-transform: uppercase;
-$default-text-weight: normal;
-$default-padding-vertical: 10px;
-$default-padding-horizontal: 20px;
-$default-radius: 10px;
+$text-font: 'Raleway', sans-serif;;
+$text-size: 14px;
+$line-height: 18px;
+$text-transform: uppercase;
+$text-weight: normal;
+$padding-vertical: 10px;
+$padding-horizontal: 20px;
+$border-radius: 10px;
 
 // default button
-$default-text-color: #fff;
-$default-background: transparent;
-$default-border-color: #fff;
+$default-button-text-color: #fff;
+$default-button-background-color: #c90000;
+$default-button-border-color: #c90000;
 
-// primary button
-$primary-text-color: #fff;
-$primary-background: #c90000;
-$primary-border-color: #c90000;
+// white button
+$white-normal-text-color: #fff;
+$white-normal-background-color: transparent;
+$white-normal-border-color: #fff;
+$white-hover-text-color: $brand-dark-text;
+$white-hover-background-color: #fff;
+$white-hover-border-color: #fff;
+
 
 // Base styles
 // --------------------------------------------------
@@ -40,27 +44,26 @@ $primary-border-color: #c90000;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 2px solid transparent;
   // font
-  font-family: $default-text-font;
-  font-weight: $default-text-weight;
+  font-family: $text-font;
+  font-weight: $text-weight;
   white-space: nowrap;
   vertical-align: middle;
-  text-transform: $default-text-transform;
+  text-transform: $text-transform;
   text-decoration: none;
   text-align: center;
   // inheritance
   @include user-select(none);
   @include button-size(
-    $default-padding-vertical,
-    $default-padding-horizontal,
-    $default-text-size,
-    $default-text-height,
-    $default-radius
+    $padding-vertical,
+    $padding-horizontal,
+    $text-size,
+    $line-height,
+    $border-radius
   );
-  // TODO: no hover state for default button [Mateusz]
   @include button-variant(
-    $default-text-color,
-    $default-background,
-    $default-border-color
+    $default-button-text-color,
+    $default-button-background-color,
+    $default-button-border-color
   );
 
   &,
@@ -75,14 +78,21 @@ $primary-border-color: #c90000;
   &:hover,
   &:focus,
   &.focus {
-    color: $default-text-color;
+    color: $default-button-text-color;
   }
 
-  &.primary-button {
+  &.white-button {
     @include button-variant(
-      $primary-text-color,
-      $primary-background,
-      $primary-border-color
+      $white-normal-text-color,
+      $white-normal-background-color,
+      $white-normal-border-color
     );
+
+    &:focus,
+    &:hover {
+      color: $white-hover-text-color;
+      background-color: $white-hover-background-color;
+      border-color: $white-hover-border-color;
+    }
   }
 }
