@@ -1,12 +1,10 @@
 //
-// Event List
+// Hackathon list
 // --------------------------------------------------
-
-@import '../_config';
+@import '../config';
 
 // Config
 // --------------------------------------------------
-// Links
 $text-font: 'Raleway', sans-serif;
 $text-size: 14px;
 $text-color: #fff;
@@ -16,10 +14,11 @@ $text-decoration: none;
 $text-align: center;
 $line-height: 30px;
 
-// City
 $main-text-size: 20px;
 
-.tile-list {
+// Base
+// --------------------------------------------------
+.hackathon-list {
   // shape
   margin: 0 -5px 0 -5px;
   padding-left: 0; // Override default ul/ol
@@ -27,25 +26,16 @@ $main-text-size: 20px;
   @include clearfix;
 
   > li {
-    position: relative;
-    padding: 5px;
     float: left;
-    width: 50%;
-
-    @media (min-width: $breakpoint-smartphone) {
-      width: 100%;
-    }
-
-    @media (min-width: $breakpoint-tablet) {
-      width: 100%;
-    }
-
-    @media (min-width: $breakpoint-desktop) {
-      width: 50%;
-    }
+    width: 100%;
+    padding: 10px;
 
     &.wide {
       width: 100% !important;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 50%;
     }
   }
 }
