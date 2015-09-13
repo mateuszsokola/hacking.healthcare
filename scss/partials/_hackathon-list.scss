@@ -1,0 +1,84 @@
+//
+// Hackathon list
+// --------------------------------------------------
+@import '../config';
+
+// Config
+// --------------------------------------------------
+$text-font: 'Raleway', sans-serif;
+$text-size: 14px;
+$text-color: #fff;
+$text-transform: uppercase;
+$text-weight: normal;
+$text-decoration: none;
+$text-align: center;
+$line-height: 30px;
+
+$main-text-size: 20px;
+
+// Base
+// --------------------------------------------------
+.hackathon-list {
+  // shape
+  margin: 0 -5px 0 -5px;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+
+  > li {
+    float: left;
+    width: 100%;
+    padding: 10px;
+
+    &.wide {
+      width: 100% !important;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 50%;
+    }
+  }
+}
+
+.event {
+  @include background-size(cover);
+  position: relative;
+  height: 180px;
+
+  .event-inner {
+    // shape
+    position: absolute;
+    background: rgba(0,0,0,.5); // fade background
+    height: 100%;
+    width: 100%;
+    // vertical align
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    // font
+    font-family: $text-font;
+    font-size: $text-size;
+    color: $text-color;
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+    line-height: $line-height;
+    text-align: $text-align;
+
+    &.inner-blue {
+      background: rgba(0,100,160,.5);
+    }
+
+    .valign {
+      display: block;
+      padding: 10px;
+    }
+    .city,
+    .date {
+      display: block;
+    }
+
+    .city {
+      font-size: $main-text-size;
+    }
+  }
+}

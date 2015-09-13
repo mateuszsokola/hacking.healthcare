@@ -8,26 +8,33 @@
 
 // Config
 // --------------------------------------------------
-$text-font: 'Raleway', sans-serif;
+$text-font: $brand-special-font;
 $text-size: 14px;
-$text-color: #404040;
+$text-color: $brand-dark-text;
 $text-transform: uppercase;
-$height: 60px;
+$text-weight: normal;
+$line-height: 24px;
+
+$link-default-transform: none;
+$link-active-transform: underline;
+
+$navbar-background-color: #fff;
+$navbar-border-color: #e0e0e0;
+
+// Menu Icon Bars
+$menu-icon-bar-color: #404040;
+$menu-icon-bar-width: 22px;
+$menu-icon-bar-height: 2px;
 
 // Base
 // --------------------------------------------------
 
-.admin-bar .global-nav {
-  // TODO: Make it responsive [Mateusz]
-  top: 32px !important;
-}
-
 .global-nav {
-  position: fixed;
-  background: #fff;
-  height: $height;
+  position: relative;
+  background: $navbar-background-color;
+  height: $global-nav-height;
   width: 100%;
-  top: 0;
+  z-index: 1;
   @include box-shadow(1px 0 5px rgba(0,0,0,.25));
 
   .container {
@@ -36,16 +43,24 @@ $height: 60px;
 
   .global-nav-header {
     @include clearfix;
+  }
 
-    @media (min-width: 720px) {
-      float: left;
-    }
+  .global-logo {
+    background: url($logo-url-png);
+    // TODO: Add it as an inline svg [Mateusz]
+    background: url($logo-url-svg), none;
+    background-size: $logo-width $logo-height;
+    height: $logo-height;
+    width: $logo-width;
+    text-indent: -9999px;
+    display: block;
   }
 
   .menu-toggle {
     position: relative;
     float: right;
     margin-right: 0;
+    padding: 18px;
     background-color: transparent;
     // Reset unusual Firefox-on-Android default style; @see https://github.com/necolas/normalize.css/issues/214
     background-image: none;
@@ -57,35 +72,26 @@ $height: 60px;
 
     // Bars
     .icon-bar {
-      // TODO: Move it to vars [Mateusz]
-      background: #404040;
-      display: block;
-      width: 22px;
-      height: 2px;
+      background: $menu-icon-bar-color;
+      width: $menu-icon-bar-width;
+      height: $menu-icon-bar-height;
       border-radius: 1px;
+      display: block;
     }
     .icon-bar + .icon-bar {
       margin-top: 4px;
     }
-
-    // TODO: Setup proper breakpoint [Mateusz]
-    @media (min-width: 720px) {
-      display: none;
-    }
   }
 
-
   .menu-collapse {
-    overflow-x: visible;
-    padding-right: 0;
-    padding-left:  0;
-    //border-top: 1px solid transparent;
+    display: none;
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
     @include clearfix;
     -webkit-overflow-scrolling: touch;
-    float: right;
 
-    &.in {
-      overflow-y: auto;
+    &.menu-open {
+      display: block;
     }
   }
 }
@@ -97,75 +103,67 @@ $height: 60px;
   text-transform: $text-transform;
   text-align: center;
   // shape
-  margin: 10px 0 0 0;
+  margin: 2px 0 0 0;
   padding-left: 0; // Override default ul/ol
   list-style: none;
   @include clearfix;
 
   > li {
     position: relative;
-    display: block;
-    float: left;
-    padding: 0 2.5px;
+    background: $navbar-background-color;
+    border-top: 1px solid $navbar-border-color;
+    width: 100%;
 
-    &:last-child {
-      padding-right: 0;
-    }
-
-    > a {
+    > a:not(.button),
+    > .link {
       // font
       color: $text-color;
-      text-decoration: none;
+      text-decoration: $link-default-transform;
+      line-height: $line-height;
       // shape
       position: relative;
       display: block;
-      padding: 7px 12px;
+      padding: 8px 12px;
+      cursor: pointer;
 
       &:hover,
       &:focus {
-        text-decoration: underline;
+        text-decoration: $link-active-transform;
       }
-    }
-
-    &.current-menu-item a {
-      background: blue;
-      color: #fff;
-      border-radius: 10px;
     }
   }
 
-  .menu-item-has-children,
-  .page_item_has_children {
+  .has-dropdown {
     position: relative;
 
-    > a {
+    > a,
+    > .link {
       padding-right: 25px;
 
       &:after {
         position: absolute;
-        margin: 3px 0 0 7px;
+        margin: 15px;
+        right: 0;
+        top: 0;
         // font
         @include icon-font;
         content: "\e601";
         font-size: 10px;
-        // animation
-        -webkit-transition: -webkit-transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
       }
     }
 
-    &.open {
-
-      // Show the menu
-      > .dropdown-menu {
+    &.dropdown-open {
+      .dropdown-menu {
         display: block;
       }
 
       // Remove the outline when :focus is triggered
-      > a {
+      > a,
+      > .link {
         outline: 0;
 
         &:after {
+          // animation
           -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
         }
@@ -174,52 +172,45 @@ $height: 60px;
   }
 
   // The dropdown menu (ul)
-  .sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .dropdown-menu {
+    display: none;
+    // position
     z-index: 5;
-    display: none; // none by default, but block on "open" of the menu
-    float: left;
-    min-width: 160px;
     padding: 0;
-    margin: 15px 0 0; // override default ul
+    // shape
+    min-width: 160px;
     list-style: none;
-    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-    background-color: #fff;
-    @include box-shadow(0 3px 5px rgba(0,0,0,.2));
+    background-color: $navbar-background-color;
     background-clip: padding-box;
 
     // Links within the dropdown menu
     > li {
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid $navbar-border-color;
 
-      &:first-child {
-        border-top: 0;
-      }
-
-      > a {
+      > a,
+      > .link {
         // font
         font-family: $text-font;
         font-size: $text-size;
         color: $text-color;
         text-transform: $text-transform;
-        text-decoration: none;
+        text-decoration: $link-default-transform;
+        line-height: $line-height;
+        font-weight: $text-weight;
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
         // shape
         display: block;
-        padding: 5px 20px;
+        padding: 8px 12px;
         clear: both;
-        font-weight: normal;
-        line-height: 24px;
-        white-space: nowrap; // prevent links from randomly breaking onto new lines
 
         &:hover,
         &:focus {
-          text-decoration: underline;
+          text-decoration: $link-active-transform;
         }
       }
 
-      &.active > a {
+      &.active > a,
+      &.active > .link {
         &,
         &:hover,
         &:focus {
@@ -230,3 +221,65 @@ $height: 60px;
   }
 }
 
+@media (min-width: $breakpoint-tablet) {
+
+  .global-nav {
+    position: fixed;
+    top: 0;
+
+    .global-nav-header {
+      float: left;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-collapse {
+      display: block;
+      width: auto;
+      border-top: 0;
+      box-shadow: none;
+      float: right;
+      margin: 3px 0;
+    }
+  }
+
+  .menu-nav {
+    > li {
+      // position
+      position: relative;
+      float: left;
+      // shape
+      padding: 0 2.5px;
+      width: auto;
+      border-top: none;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    .has-dropdown > a:after,
+    .has-dropdown > .link:after, {
+      margin: 14px 7px;
+    }
+  }
+
+  .dropdown-menu {
+    // position
+    position: absolute;
+    margin-top: 10px;
+    top: 100%;
+    left: 0;
+    float: left;
+    // shape
+    @include box-shadow(0 3px 5px rgba(0,0,0,.2));
+    // font
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+
+    > li:first-child {
+      border-top: 0;
+    }
+  }
+}

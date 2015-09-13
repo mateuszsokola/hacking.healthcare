@@ -1,0 +1,18 @@
+//
+// Social links
+// --------------------------------------------------
+@import '../_config';
+
+// Base
+// --------------------------------------------------
+.social-links {
+  display: table;
+  margin: 20px auto;
+
+  a {
+    display: table-cell;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

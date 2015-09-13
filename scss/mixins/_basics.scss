@@ -45,3 +45,59 @@
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
+// Vertical align
+// @see http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@mixin form-field($text-size, $text-color, $line-height, $background-color, $border-color, $border-radius, $focus-color, $placeholder-color) {
+  //font
+  font-size: $text-size;
+  color: $text-color;
+  line-height: $line-height;
+  // shape
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: $background-color;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  // animations
+  -webkit-transition: border-color ease-in-out .15,
+  box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15,
+  box-shadow ease-in-out .15s;
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    border-color: $focus-color;
+    outline: 0;
+    @include box-shadow(0 0 8px $focus-color);
+  }
+
+  // Placeholder
+  &::-moz-placeholder {
+    // Firefox
+    color: $placeholder-color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+
+  &:-ms-input-placeholder {
+    // Internet Explorer 10+
+    color: $placeholder-color;
+  }
+
+  &::-webkit-input-placeholder {
+    // Safari and Chrome
+    color: $placeholder-color;
+  }
+}

@@ -1,68 +1,81 @@
 //
 // Homepage
 // --------------------------------------------------
-
 @import '../_config';
-// Mixins
-@import '../mixins/_background-size';
 
-// Config
+// Base
 // --------------------------------------------------
-$text-font: 'Open Sans', sans-serif;
-$text-size: 12px;
-$text-height: 24px;
-$text-color: #fff;
-
-$headline-size: 24px;
-$headline-height: 50px;
-$headline-weight: normal;
-$large-headline-size: 32px;
-
-$section-padding-top: 120px;
-$section-padding-bottom: 140px;
-
 .home-page {
-  // shape
-  @include background-size(cover);
-  overflow: hidden;
-  margin-top: $height;
-  width: 100%;
-  // font
-  font-family: $text-font;
-  font-size: $text-size;
-  line-height: $text-height;
-  color: $text-color;
 
-  .home-page-inner {
-    // shape
-    background: rgba(0,0,0,.5); // fade background
-  }
+  .splash {
+    // splash config
+    $mobile-padding-top: 60px;
+    $mobile-padding-bottom: 60px;
+    $mobile-heading-margin-bottom: 60px;
+    $mobile-heading-size: 16px;
+    $mobile-heading-line-height: 24px;
+    $mobile-headline-size: 24px;
+    $mobile-headline-line-height: 32px;
 
-  .container {
-    // shape
-    padding-top: $section-padding-top;
-    padding-bottom: $section-padding-bottom;
-    // font
-    text-align: center;
-  }
+    $desktop-padding-top: 120px;
+    $desktop-padding-bottom: 120px;
+    $desktop-heading-margin-bottom: 120px;
+    $desktop-heading-size: 24px;
+    $desktop-heading-line-height: 42px;
+    $desktop-headline-size: 32px;
+    $desktop-headline-line-height: 42px;
 
-  .button {
-    margin: 0 20px;
-  }
-
-  h1 {
-    // shape
-    margin-bottom: 120px;
-    // font
-    font-size: $headline-size;
-    line-height: $headline-height;
-    font-weight: $headline-weight;
-
-    .headline {
+    .container {
       // shape
-      display: block;
+      padding-top: $mobile-padding-top;
+      padding-bottom: $mobile-padding-bottom;
+    }
+
+    .button {
+      // shape
+      margin: 10px 20px;
+    }
+
+    h1 {
+      // shape
+      margin-bottom: $mobile-heading-margin-bottom;
       // font
-      font-size: $large-headline-size;
+      font-size: $mobile-heading-size;
+      line-height: $mobile-heading-line-height;
+
+      .headline {
+        // shape
+        display: block;
+        margin-bottom: 8px;
+        // font
+        font-size: $mobile-headline-size;
+        line-height: $mobile-headline-line-height;
+      }
+    }
+
+    // Smartphone
+    @media (min-width: $breakpoint-smartphone) {
+      .container {
+        // shape
+        padding-top: $desktop-padding-top;
+        padding-bottom: $desktop-padding-bottom;
+      }
+
+      h1 {
+        // shape
+        margin-bottom: $desktop-heading-margin-bottom;
+        // font
+        font-size: $desktop-heading-size;
+        line-height: $desktop-heading-line-height;
+
+        .headline {
+          // shape
+          display: block;
+          // font
+          font-size: $desktop-headline-size;
+          line-height: $desktop-headline-line-height;
+        }
+      }
     }
   }
 }

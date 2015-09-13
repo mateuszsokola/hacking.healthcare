@@ -8,24 +8,48 @@ html {
 }
 
 body {
-  font-family : $default-text-font;
-  font-size   : $default-text-size;
-  height: 100%
+  font-family: $default-text-font;
+  font-size: $default-text-size;
+  color: $default-text-color;
+  line-height: $default-line-height;
+  min-width: $brand-website-minimal-width;
+  height: 100%;
 }
 
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-  @include clearfix;
+div,
+ul > li,
+.field {
+  box-sizing: border-box;
 }
 
-.global-logo {
-  background: url($logo-url-png);
-  // TODO: Add it as an inline svg [Mateusz]
-  background: url($logo-url-svg), none;
-  background-size: $logo-width $logo-height;
-  height: $logo-height;
-  width: $logo-width;
-  text-indent: -9999px;
+h1,
+h2,
+h3,
+h4 {
+  font-family: $default-heading-font;
+  font-weight: $default-heading-weight;
+  color: $default-heading-color;
+}
+
+h1 {
+  line-height: $default-heading-line-height;
+  font-size: $default-heading-size;
+}
+
+a {
+  color: $brand-regular-link;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: $brand-regular-link-hover;
+  }
+}
+
+.small-title {
+  // shape
+  margin-top: 20px;
   display: block;
+  // font
+  color: $brand-prior-text;
 }

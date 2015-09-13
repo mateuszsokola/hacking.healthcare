@@ -1,0 +1,47 @@
+//
+// Table
+// --------------------------------------------------
+@import '../config';
+
+// Config
+// --------------------------------------------------
+$thead-background: #f1f1f1;
+$tbody-background: #fafafa;
+$border-color: $brand-border-color;
+
+$thead-text-color: $brand-dark-text;
+$text-size: 14px;
+
+// Base
+// --------------------------------------------------
+table {
+  font-size: $text-size;
+  margin-top: 40px;
+  width: 100%;
+
+  thead th,
+  tbody td {
+    padding: 15px 10px;
+  }
+
+  thead {
+    tr {
+      background: $thead-background;
+      color: $thead-text-color;
+    }
+  }
+
+  tbody {
+    border-bottom: 1px solid $border-color;
+
+    tr {
+      border-top: 1px solid $border-color;
+      background: $tbody-background;
+
+      td:first-child {
+        text-align: center;
+        width: 15%;
+      }
+    }
+  }
+}
