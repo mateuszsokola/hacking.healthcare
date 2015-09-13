@@ -1,0 +1,92 @@
+//
+// Hackathon helpers
+// --------------------------------------------------
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+$text-font: $brand-special-font;
+$text-transform: uppercase;
+$text-weight: normal;
+$text-decoration: none;
+$text-align: center;
+$line-height: 30px;
+
+$link-color: $brand-bright-text;
+$text-color: darken($brand-bright-text, 30%);
+$heading-text-size: 20px;
+
+// Base
+// --------------------------------------------------
+.tile-hackathon {
+  @include background-size(cover);
+  position: relative;
+  height: 180px;
+
+  a,
+  span {
+    &.inner-tile-hackathon {
+      // shape
+      position: absolute;
+      background: rgba(0,0,0,.5); // fade background
+      height: 100%;
+      width: 100%;
+      // vertical align
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      // font
+      font-family: $text-font;
+      text-transform: $text-transform;
+      text-decoration: $text-decoration;
+      line-height: $line-height;
+      text-align: $text-align;
+
+      &.special-blue-opacity {
+        background: $brand-blue;
+      }
+
+      &.special-red-opacity {
+        background: $brand-red;
+      }
+    }
+
+    .valign {
+      display: block;
+      padding: 10px;
+    }
+
+    .hackathon-city {
+      font-size: $heading-text-size;
+      display: block;
+    }
+  }
+
+  span.inner-tile-hackathon {
+    color: $text-color;
+  }
+
+  a.inner-tile-hackathon {
+    color: $link-color;
+
+    &:focus,
+    &:hover {
+      background: rgba(0, 0, 0, .4); // fade background
+      color: $link-color; // override default hover color
+    }
+
+    &.special-blue-opacity {
+      &:focus,
+      &:hover {
+        background: lighten($brand-blue, 10%);
+      }
+    }
+
+    &.special-red-opacity {
+      &:focus,
+      &:hover {
+        background: lighten($brand-red, 10%);
+      }
+    }
+  }
+}

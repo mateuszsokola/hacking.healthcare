@@ -1,0 +1,29 @@
+//
+// Responsive
+// --------------------------------------------------
+@import '../_config';
+
+.breakline-below-desktop {
+  display: block;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: inline-block;
+  }
+}
+
+.visible-above-tablet {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: block;
+  }
+}
+
+.visible-below-tablet {
+  display: none;
+
+  // must be lower than tablet, cause of conflicts
+  @media (max-width: $breakpoint-tablet - 1) {
+    display: block;
+  }
+}

@@ -1,0 +1,129 @@
+//
+// Sidebar
+// --------------------------------------------------
+@import '../_config';
+
+// required mixins
+@import '../mixins/_basics';
+
+// Config
+// --------------------------------------------------
+// Text, Links etc.
+$text-font: 'Raleway', sans-serif;
+$text-size: 14px;
+$text-color: #fff;
+$text-transform: none;
+$text-weight: normal;
+$line-height: 20px;
+
+// Heading
+$title-color: #fff;
+$title-size: 14px;
+$title-line-height: 20px;
+$title-transform: uppercase;
+
+// Links
+$link-decoration: none;
+$link-transform: none;
+$link-line-height: 16px;
+$link-default-color: #a4a4a4;
+
+// Sidebar
+$background-color: #202020;;
+$background-image: url("assets/pattern.png");
+
+// Base
+// --------------------------------------------------
+.sidebar {
+  // shape
+  background: $background-color $background-image;
+  @include box-shadow(inset 0 2px 5px rgba(0, 0, 0, 0.3));
+  // font
+  font-size: $text-size;
+  color: $text-color;
+  text-transform: $text-transform;
+  line-height: $line-height;
+  text-align: center;
+
+  a {
+    // font
+    font-family: $text-font;
+    font-weight: $text-weight;
+    color: $link-default-color;
+    text-transform: $link-transform;
+    line-height: $link-line-height;
+    text-decoration: $link-decoration;
+    // shape
+    display: inline-block;
+    padding: 5px 0;
+
+    &:focus,
+    &:hover {
+      color: darken($link-default-color, 25%);
+    }
+
+    &.follow-link {
+      margin-right: 15px;
+      font-size: 24px;
+    }
+  }
+
+  p,
+  .imprint-link {
+    margin: 15px 0;
+  }
+
+  .container > .col {
+    // shape
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: $breakpoint-smartphone) {
+      // shape
+      overflow: hidden;
+      width: 50%;
+
+      &.twitter-col {
+        height: 265px;
+      }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      // font
+      text-align: left;
+      // shape
+      width: 25%;
+
+      &.follow-col {
+        width: 15%;
+      }
+      &.twitter-col,
+      &.about-col {
+        width: 30%;
+      }
+    }
+  }
+
+  .title {
+    // font
+    font-size: $title-size;
+    color: $title-color;
+    line-height: $title-line-height;
+    text-transform: $title-transform;
+    // shape
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.sidebar-nav {
+  // shape
+  margin: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+
+  > li {
+    padding: 3px 0;
+  }
+}

@@ -1,0 +1,18 @@
+//
+// Text
+// --------------------------------------------------
+@import '../_config';
+
+// Base
+// --------------------------------------------------
+.valign {
+  @include vertical-align;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.info-text {
+  max-width: 600px;
+}

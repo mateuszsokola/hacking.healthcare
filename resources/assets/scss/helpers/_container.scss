@@ -1,0 +1,58 @@
+//
+// Container
+// --------------------------------------------------
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+$container-padding-left: 20px;
+$container-padding-right: 20px;
+
+$column-padding-left: 10px;
+$column-padding-right: 10px;
+
+// Base
+// --------------------------------------------------
+.container {
+  max-width: $breakpoint-tablet;
+  min-width: $brand-website-minimal-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding-left;
+  padding-right: $container-padding-right;
+  @include clearfix;
+
+  > .col {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: $column-padding-left;
+    padding-right: $column-padding-right;
+    width: 100%;
+
+    &:first-child {
+      margin-left: -($column-padding-left);
+    }
+
+    &:last-child,
+    &.about-col {
+      margin-right: -($column-padding-right);
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    max-width: $breakpoint-tablet;
+
+    > .col {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    max-width: $breakpoint-desktop;
+
+    > .col {
+      width: 25%;
+    }
+  }
+}

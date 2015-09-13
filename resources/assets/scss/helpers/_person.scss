@@ -1,0 +1,47 @@
+//
+// Person helpers
+// --------------------------------------------------
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+$text-color: $brand-dark-text;
+$text-size: 16px;
+
+$max-width: 185px;
+$max-height: 185px;
+$border-radius: $max-width;
+
+// Base
+// --------------------------------------------------
+.first-name-person,
+.last-name-person,
+.photo-person {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width;
+}
+
+.first-name-person,
+.last-name-person,
+.full-name-person,
+.profession-person {
+  display: block;
+  text-align: center;
+}
+
+.first-name-person,
+.last-name-person,
+.full-name-person {
+  color: $text-color;
+  font-size: $text-size;
+}
+
+.photo-person {
+  max-height: $max-height;
+  height: auto;
+  width: 100%;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin-bottom: 10px;
+}

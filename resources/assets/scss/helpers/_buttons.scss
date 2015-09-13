@@ -1,0 +1,121 @@
+//
+// Buttons
+// @see bootstrap-sass
+// --------------------------------------------------
+@import '../_config';
+
+// required mixins
+@import '../mixins/_basics';
+@import '../mixins/_buttons';
+
+// Config
+// --------------------------------------------------
+$text-font: 'Raleway', sans-serif;;
+$text-size: 14px;
+$line-height: 18px;
+$text-transform: uppercase;
+$text-weight: normal;
+$padding-vertical: 10px;
+$padding-horizontal: 20px;
+$border-radius: 10px;
+
+// default button
+$default-button-text-color: #fff;
+$default-button-background-color: #c90000;
+$default-button-border-color: #c90000;
+
+// white button
+$white-normal-text-color: #fff;
+$white-normal-background-color: transparent;
+$white-normal-border-color: #fff;
+$white-hover-text-color: $brand-dark-text;
+$white-hover-background-color: #fff;
+$white-hover-border-color: #fff;
+
+// small button
+$small-text-size: 12px;
+$small-padding-vertical: 3px;
+$small-padding-horizontal: 12px;
+
+// large button
+$large-text-size: 18px;
+$large-padding-vertical: 20px;
+$large-padding-horizontal: 40px;
+
+// Base styles
+// --------------------------------------------------
+.button {
+  // shape
+  display: inline-block;
+  margin-bottom: 0; // For input.button
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 2px solid transparent;
+  // font
+  font-family: $text-font;
+  font-weight: $text-weight;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-transform: $text-transform;
+  text-decoration: none;
+  text-align: center;
+  // inheritance
+  @include user-select(none);
+  @include button-size(
+    $padding-vertical,
+    $padding-horizontal,
+    $text-size,
+    $line-height,
+    $border-radius
+  );
+  @include button-variant(
+    $default-button-text-color,
+    $default-button-background-color,
+    $default-button-border-color
+  );
+
+  &,
+  &:active,
+  &.active-button {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $default-button-text-color;
+  }
+
+  &.white-button {
+    @include button-variant(
+      $white-normal-text-color,
+      $white-normal-background-color,
+      $white-normal-border-color
+    );
+
+    &:focus,
+    &:hover {
+      color: $white-hover-text-color;
+      background-color: $white-hover-background-color;
+      border-color: $white-hover-border-color;
+    }
+  }
+
+  &.small-button {
+    // font
+    font-size: $small-text-size;
+    // shape
+    padding: $small-padding-vertical $small-padding-horizontal;
+  }
+
+  &.large-button {
+    // font
+    font-size: $large-text-size;
+    // shape
+    padding: $large-padding-vertical $large-padding-horizontal;
+  }
+}

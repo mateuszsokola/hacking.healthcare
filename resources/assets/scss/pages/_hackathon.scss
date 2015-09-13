@@ -1,0 +1,248 @@
+//
+// Hackathon page
+// --------------------------------------------------
+@import '../_config';
+
+// Base
+// --------------------------------------------------
+.hackathon-page {
+
+  &.sticky {
+    .secondary-nav {
+      position: fixed;
+      z-index: 1;
+      top: 64px;
+    }
+  }
+
+  .container {
+    padding-bottom: 10px;
+
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    > .col {
+      // shape
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      // shape
+      margin: 0; // override negative margin
+
+      // Tablet
+      @media (min-width: $breakpoint-tablet) {
+        // shape
+        display: table-cell;
+        vertical-align: top;
+        float: none;
+      }
+    }
+  }
+
+  .splash {
+    // splash config
+    $splash-text-font: $brand-special-font;
+    $splash-text-transform: uppercase;
+
+    $splash-mobile-line-height: 24px;
+    $splash-mobile-heading-size: 20px;
+    $splash-mobile-text-size: 14px;
+    $splash-mobile-padding: 40px 0;
+
+    $splash-desktop-line-height: 40px;
+    $splash-desktop-heading-size: 32px;
+    $splash-desktop-text-size: 18px;
+    $splash-desktop-padding: 80px 0;
+
+    // font
+    font-family: $splash-text-font;
+    font-size: $splash-mobile-text-size;
+    line-height: $splash-mobile-line-height;
+    text-transform: $splash-text-transform;
+
+    h1 {
+      // font
+      font-family: $splash-text-font;
+      font-size: $splash-mobile-heading-size;
+      line-height: $splash-mobile-line-height;
+      text-transform: $splash-text-transform;
+      // shape
+      margin: 0;
+    }
+
+    .container {
+      // shape
+      padding: $splash-mobile-padding;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+
+      margin-top: $global-nav-height;
+      // font
+      font-size: $splash-desktop-text-size;
+      line-height: $splash-desktop-line-height;
+
+      h1 {
+        font-size: $splash-desktop-heading-size;
+        line-height: $splash-desktop-line-height;
+      }
+
+      .container {
+        // shape
+        padding: $splash-desktop-padding;
+      }
+    }
+  }
+
+  .secondary-nav {
+    // config
+    $background-color: $brand-bright-text;
+    $link-size: $default-small-size;
+
+    // default hidden
+    display: none;
+    // shape
+    background: $background-color;
+    width: 100%;
+    @include box-shadow(1px 0 5px rgba(0, 0, 0, .25));
+
+    .container {
+      padding: 5px;
+    }
+
+    .menu-nav {
+      // font
+      font-size: $link-size;
+      // shape
+      margin: 0;
+
+      .button {
+        margin-top: 6px;
+      }
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+    }
+  }
+
+  .location {
+    // config
+    $map-width: 300px;
+    $map-height: 200px;
+    $desktop-text-align: left;
+    $mobile-text-align: center;
+
+    #map {
+      width: $map-width;
+      height: $map-height;
+      background: #f0f0f0;
+      margin: 0 auto 10px;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+
+    .col {
+      // font
+      text-align: $mobile-text-align;
+
+      // Tablet
+      @media (min-width: $breakpoint-tablet) {
+        // shape
+        min-width: $map-width;
+        padding-left: 20px;
+        // font
+        text-align: $desktop-text-align;
+
+        &:first-child {
+          padding-left: 0;
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  .schedule {
+    h1 + table {
+      margin-top: 0;
+    }
+  }
+
+  .mentors {
+    $border-color: $brand-border-color;
+    $mentor-padding-vertical: 20px;
+    $mentor-picture-width: 185px;
+
+    .full-name-person {
+      margin-bottom: 10px;
+    }
+
+    .mentor {
+      border-bottom: 1px solid $border-color;
+      padding-bottom: $mentor-padding-vertical;
+      padding-top: $mentor-padding-vertical;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+
+      .full-name-person,
+      .profession-person {
+        text-align: left;
+      }
+
+      .col {
+        // shape
+        min-width: $mentor-picture-width;
+        padding-left: 20px;
+
+        &:first-child {
+          padding-left: 0;
+          width: 15%;
+        }
+      }
+    }
+  }
+
+  .organizers {
+    margin-bottom: -25px;
+
+    .person-hlist {
+      margin-bottom: 0;
+    }
+  }
+
+  .tickets {
+    // config
+    $encouragement-text-color: $brand-dark-text;
+    $encouragement-text-align: center;
+    $encouragement-text-size: 18px;
+    $encouragement-line-height: 24px;
+
+    .visible-below-tablet {
+      // font
+      text-align: $encouragement-text-align;
+    }
+
+    .encouragement {
+      // shape
+      margin-top: 20px;
+      display: block;
+      // font
+      font-size: $encouragement-text-size;
+      color: $encouragement-text-color;
+      line-height: $encouragement-line-height;
+    }
+
+    .button {
+      // shape
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+  }
+}

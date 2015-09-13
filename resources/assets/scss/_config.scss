@@ -1,0 +1,58 @@
+//
+// Global Config
+// --------------------------------------------------
+
+//  Brand
+// --------------------------------------------------
+$brand-website-minimal-width: 320px;
+
+$brand-regular-font: 'Open Sans', sans-serif;
+$brand-special-font: 'Raleway', sans-serif;
+
+$brand-dark-text: #404040;
+$brand-bright-text: #fff;
+
+$brand-prior-text: $brand-dark-text;
+$brand-regular-text: #888;
+$brand-regular-link: #a4a4a4;
+$brand-regular-link-hover: $brand-regular-text;
+
+$brand-blue: #00aeff;
+$brand-red: #b80000;
+
+$brand-border-color: #c8c8c8;
+
+//  Typography
+// --------------------------------------------------
+$default-text-font: $brand-regular-font;
+$default-text-color: $brand-regular-text;
+$default-text-size: 14px;
+$default-line-height: 20px;
+
+$default-heading-font: $brand-regular-font;
+$default-heading-color: $brand-dark-text;
+$default-heading-weight: normal;
+$default-heading-size: 24px;
+$default-heading-line-height: 34px;
+
+$default-small-size: 12px;
+
+//  Logo
+// --------------------------------------------------
+$logo-url-png: "assets/logo.png";
+$logo-url-svg: "assets/logo.svg";
+$logo-width  : 234px;
+$logo-height : 50px;
+
+//  Breakpoints
+// --------------------------------------------------
+$breakpoint-smartphone: 490px;
+$breakpoint-tablet: 720px;
+$breakpoint-desktop: 980px;
+
+// TODO debug [Mateusz]
+$breakpoint-large: 980px;
+
+//  Global Navbar
+// --------------------------------------------------
+$global-nav-height: 60px;

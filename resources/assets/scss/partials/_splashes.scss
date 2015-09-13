@@ -1,0 +1,41 @@
+//
+// Splashes
+// --------------------------------------------------
+@import '../_config';
+
+// Mixins
+@import '../mixins/_background-size';
+
+// Config
+// --------------------------------------------------
+$text-color: $brand-bright-text;
+$text-align: center;
+$text-weight: normal;
+
+$fade: rgba(0,0,0,.5);
+
+.splash {
+  // shape
+  @include background-size(cover);
+  overflow: hidden;
+  width: 100%;
+  // font
+  text-align: $text-align;
+  color: $text-color;
+
+  .inner-splash {
+    // shape
+    background: $fade; // fade background
+  }
+
+  h1 {
+    font-weight: $text-weight;
+    color: $text-color;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .splash {
+    margin-top: $global-nav-height;
+  }
+}

@@ -1,0 +1,36 @@
+//
+// Icons
+// --------------------------------------------------
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?ism6ec');
+  src:url('fonts/icomoon.eot?#iefixism6ec') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?ism6ec') format('truetype'),
+  url('fonts/icomoon.woff?ism6ec') format('woff'),
+  url('fonts/icomoon.svg?ism6ec#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  @include icon-font;
+}
+
+.icon-dropdown:before {
+  content: "\e601";
+}
+.icon-home:before {
+  content: "\e602";
+}
+.icon-twitter:before {
+  content: "\e603";
+}
+.icon-facebook:before {
+  content: "\e600";
+}
+.icon-linkedin:before {
+  content: "\e604";
+}
+.icon-heart:before {
+  content: "\e605";
+}

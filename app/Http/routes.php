@@ -12,5 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/home');
+});
+
+Route::get('/upcoming', function () {
+    return view('pages/upcoming');
+});
+
+Route::get('/upcoming/berlin-2015', function () {
+    return view('pages/berlin-2015');
+});
+
+Route::get('/past', function () {
+    return view('pages/past');
+});
+
+Route::get('/team', function () {
+    return view('pages/team');
+});
+
+Route::get('/imprint', function () {
+    return view('pages/imprint');
 });
