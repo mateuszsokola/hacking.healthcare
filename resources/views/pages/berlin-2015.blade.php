@@ -34,9 +34,6 @@
                 <a href="#schedule">Schedule</a>
             </li>
             <li>
-                <a href="#mentors">Mentors</a>
-            </li>
-            <li>
                 <a href="#sponsors">Sponsors</a>
             </li>
             <li>
@@ -121,158 +118,13 @@
     </div>
 </div>
 
-<div id="mentors" class="mentors">
-    <div class="container">
-        <h1>Mentors</h1>
-
-        <div class="container mentor">
-            <div class="col left-col">
-                <div class="photo-person">
-                    <img
-                            src="assets/me.jpg"
-                            alt=""
-                            width="225"
-                            height="200">
-                </div>
-                <div class="social-links">
-                    <a href="http://facebook.com">
-                        <span class="icon-facebook"></span>
-                        <span class="only-screen-readers">Facebook</span>
-                    </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-twitter"></span>
-                        <span class="only-screen-readers">Twitter</span>
-                    </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-home"></span>
-                        <span class="only-screen-readers">Home Page</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <span class="full-name-person">Christoph Sauermann</span>
-                <span class="profession-person">MD</span>
-                <p>Christoph Sauermann studied business economics and held various positions at international pharmaceutical companies. As General Manager Wyeth Austria and Commercial Chair for Austria/CEE/CIS, he was in charge of various international health and e-health projects. He was also president of the Forum of Research Pharmaceutical Companies in Austria and board member of the Austrian Pharmaceutical Industry Association. Participating in the Austrian Pharmaceutical Negotiation Team for all relevant health care reform projects led to a deep knowledge of the health care system.</p>
-                <p>After 17 years industry experience he founded in 2010 mediclass Gesundheitsclub, a new and medical health concept of private practices, which offers ambulatory medical services to patients in an affordable manner.</p>
-            </div>
-        </div>
-
-        <div class="container mentor">
-            <div class="col left-col">
-                <div class="photo-person">
-                    <img
-                            src="assets/me.jpg"
-                            alt=""
-                            width="225"
-                            height="200">
-                </div>
-                <div class="social-links">
-                    <a href="http://facebook.com">
-                        <span class="icon-facebook"></span>
-                        <span class="only-screen-readers">Facebook</span>
-                    </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-twitter"></span>
-                        <span class="only-screen-readers">Twitter</span>
-                    </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-home"></span>
-                        <span class="only-screen-readers">Home Page</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <span class="full-name-person">Christoph Sauermann</span>
-                <span class="profession-person">MD</span>
-                <p>Christoph Sauermann studied business economics and held various positions at international pharmaceutical companies. As General Manager Wyeth Austria and Commercial Chair for Austria/CEE/CIS, he was in charge of various international health and e-health projects. He was also president of the Forum of Research Pharmaceutical Companies in Austria and board member of the Austrian Pharmaceutical Industry Association. Participating in the Austrian Pharmaceutical Negotiation Team for all relevant health care reform projects led to a deep knowledge of the health care system.</p>
-                <p>After 17 years industry experience he founded in 2010 mediclass Gesundheitsclub, a new and medical health concept of private practices, which offers ambulatory medical services to patients in an affordable manner.</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
 <div id="sponsors" class="container">
     <h1>Sponsors</h1>
 
     <ul class="partner-list">
         <li>
             <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-    </ul>
-</div>
-
-<div id="partners" class="container">
-    <h1>Partners</h1>
-
-    <ul class="partner-list">
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="" width="210" height="60">
-                <span class="only-screen-readers">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://facebook.com">
-                <img src="assets/microsoft.png" alt="">
-                <span class="only-screen-readers">Facebook</span>
+                <img src="{{url('assets/sponsor-ibm.png')}}" alt="IBM" width="210" height="60">
             </a>
         </li>
     </ul>
