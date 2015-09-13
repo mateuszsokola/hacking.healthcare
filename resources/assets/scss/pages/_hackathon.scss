@@ -21,22 +21,22 @@
     > .container {
       padding-left: 0;
       padding-right: 0;
-    }
 
-    > .col {
-      // shape
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      // shape
-      margin: 0; // override negative margin
-
-      // Tablet
-      @media (min-width: $breakpoint-tablet) {
+      > .col {
         // shape
-        display: table-cell;
-        vertical-align: top;
-        float: none;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        // shape
+        margin: 0; // override negative margin
+
+        // Tablet
+        @media (min-width: $breakpoint-tablet) {
+          // shape
+          display: table-cell;
+          vertical-align: top;
+          float: none;
+        }
       }
     }
   }
@@ -148,7 +148,7 @@
       margin-top: 30px;
     }
 
-    .col {
+    .container > .col {
       // font
       text-align: $mobile-text-align;
 
@@ -196,7 +196,7 @@
         text-align: left;
       }
 
-      .col {
+      .container > .col {
         // shape
         min-width: $mentor-picture-width;
         padding-left: 20px;

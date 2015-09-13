@@ -35,10 +35,11 @@ module.exports = function (grunt) {
                     'sass'
                 ],
                 files: [
-                    'scss/**/*.scss'
+                    'resources/assets/scss/**/*.scss'
                 ]
             },
 
+            // TODO: no html files anymore adjust it to laravel [Mateusz]
             files: {
                 options: {
                     livereload: true
