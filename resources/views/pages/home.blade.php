@@ -4,7 +4,7 @@
 @section('page-name', 'home-page')
 
 @section('content')
-    <div class="splash" style="background: url('assets/photo.jpg') center center no-repeat;">
+    <div class="splash" style="background: url('assets/home-splash.jpg') center center no-repeat;">
         <div class="inner-splash">
             <div class="container">
                 <h1>
