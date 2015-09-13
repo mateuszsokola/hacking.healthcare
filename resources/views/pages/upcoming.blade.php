@@ -12,13 +12,13 @@
 
             <ul class="hackathon-list">
                 <li>
-                    <div class="tile-hackathon" style="background: url('assets/city-wide.jpg') no-repeat center center;">
-                    <a class="inner-tile-hackathon" href="upcoming/berlin-2015">
-                        <span class="valign">
-                            <span class="hackathon-city">Berlin</span>
-                            October 16-18
-                        </span>
-                    </a>
+                    <div class="tile-hackathon" style="background: url('assets/berlin-small.jpg') no-repeat center center;">
+                        <a class="inner-tile-hackathon" href="upcoming/berlin-2015">
+                            <span class="valign">
+                                <span class="hackathon-city">Berlin</span>
+                                October 16-18
+                            </span>
+                        </a>
                     </div>
                 </li>
                 <li>

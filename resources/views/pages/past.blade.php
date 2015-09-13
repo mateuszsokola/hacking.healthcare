@@ -11,7 +11,7 @@
 
             <ul class="hackathon-list">
                 <li>
-                    <div class="tile-hackathon" style="background: url('assets/city-wide.jpg') no-repeat center center;">
+                    <div class="tile-hackathon" style="background: url('assets/vienna-2-small.jpg') no-repeat center center;">
                         <a
                             class="inner-tile-hackathon"
                             href="https://www.facebook.com/media/set/?set=a.1561600160751326.1073741830.1553212924923383&type=3"
@@ -24,7 +24,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="tile-hackathon" style="background: url('assets/city-wide.jpg') no-repeat center center;">
+                    <div class="tile-hackathon" style="background: url('assets/vienna-1-small.jpg') no-repeat center center;">
                         <a
                             class="inner-tile-hackathon"
                             href="https://www.facebook.com/media/set/?set=a.1622724671305541.1073741832.1553212924923383&type=3"

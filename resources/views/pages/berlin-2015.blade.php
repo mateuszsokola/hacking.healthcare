@@ -12,7 +12,7 @@
 @section('content')
 
 <!-- TODO: Add defered loading for images [Mateusz] -->
-<div class="splash" style="background: url({{url('assets/city-full.jpg')}}) center center no-repeat;">
+<div class="splash" style="background: url({{url('assets/berlin-large.jpg')}}) center center no-repeat;">
     <div class="inner-splash">
         <div class="container">
             <h1>Berlin</h1>
@@ -133,28 +133,27 @@
 <div id="organizers" class="organizers">
     <div class="container">
         <h1>Organizers</h1>
-
         <ul class="person-hlist">
             <li>
                 <div class="photo-person">
                     <img
-                            src="assets/me.jpg"
+                            src="{{url('assets/team-fdebong.jpg')}}"
                             alt=""
                             width="200"
-                            height="190">
+                            height="200">
                 </div>
-                <span class="first-name-person">Adam</span>
-                <span class="last-name-person">Kutanski</span>
+                <span class="first-name-person">Fredrik</span>
+                <span class="last-name-person">Debong</span>
                 <div class="social-links">
-                    <a href="http://facebook.com">
+                    <a href="https://www.facebook.com/fdebong">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="http://twitter.com">
+                    <a href="https://twitter.com/fdebong">
                         <span class="icon-twitter"></span>
                         <span class="only-screen-readers">Twitter</span>
                     </a>
-                    <a href="http://twitter.com">
+                    <a href="https://mysugr.com/">
                         <span class="icon-home"></span>
                         <span class="only-screen-readers">Home Page</span>
                     </a>
@@ -163,75 +162,63 @@
             <li>
                 <div class="photo-person">
                     <img
-                            src="assets/me.jpg"
+                            src="{{url('assets/team-sness.jpg')}}"
                             alt=""
                             width="200"
-                            height="190">
+                            height="200">
                 </div>
-                <span class="first-name-person">Adam</span>
-                <span class="last-name-person">Kutanski</span>
+                <span class="first-name-person">Stephanie</span>
+                <span class="last-name-person">Ness</span>
                 <div class="social-links">
-                    <a href="http://facebook.com">
+                    <a href="https://www.facebook.com/StephanieNess1989">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-twitter"></span>
-                        <span class="only-screen-readers">Twitter</span>
-                    </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-home"></span>
-                        <span class="only-screen-readers">Home Page</span>
+                    <a href="https://at.linkedin.com/in/nessstephanie">
+                        <span class="icon-linkedin"></span>
+                        <span class="only-screen-readers">Linkedin</span>
                     </a>
                 </div>
             </li>
             <li>
                 <div class="photo-person">
                     <img
-                            src="assets/me.jpg"
+                            src="{{url('assets/team-msokola.jpg')}}"
                             alt=""
                             width="200"
-                            height="190">
+                            height="200">
                 </div>
-                <span class="first-name-person">Adam</span>
-                <span class="last-name-person">Kutanski</span>
+                <span class="first-name-person">Matt</span>
+                <span class="last-name-person">Sokola</span>
                 <div class="social-links">
-                    <a href="http://facebook.com">
+                    <a href="https://www.facebook.com/mateusz.sokola">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-twitter"></span>
-                        <span class="only-screen-readers">Twitter</span>
-                    </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-home"></span>
-                        <span class="only-screen-readers">Home Page</span>
+                    <a href="https://at.linkedin.com/pub/mateusz-sokola/72/b20/770">
+                        <span class="icon-linkedin"></span>
+                        <span class="only-screen-readers">Linkedin</span>
                     </a>
                 </div>
             </li>
             <li>
                 <div class="photo-person">
                     <img
-                            src="assets/me.jpg"
+                            src="{{url('assets/team-cweichselbaum.jpg')}}"
                             alt=""
                             width="200"
-                            height="190">
+                            height="200">
                 </div>
-                <span class="first-name-person">Adam</span>
-                <span class="last-name-person">Kutanski</span>
+                <span class="first-name-person">Christian</span>
+                <span class="last-name-person">Weichselbaum</span>
                 <div class="social-links">
-                    <a href="http://facebook.com">
+                    <a href="https://www.facebook.com/weichselbaum">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-twitter"></span>
-                        <span class="only-screen-readers">Twitter</span>
-                    </a>
-                    <a href="http://twitter.com">
-                        <span class="icon-home"></span>
-                        <span class="only-screen-readers">Home Page</span>
+                    <a href="https://at.linkedin.com/in/christianweichselbaum">
+                        <span class="icon-linkedin"></span>
+                        <span class="only-screen-readers">Linkedin</span>
                     </a>
                 </div>
             </li>
