@@ -7,7 +7,7 @@
  * @param immediate
  * @returns {Function}
  */
-function debounce(func, wait, immediate) {
+function debounce(func, wait, immediate){
   'use strict';
 
   var timeout;
@@ -28,6 +28,26 @@ function debounce(func, wait, immediate) {
       func.apply(context, args);
     }
   };
+}
+/**
+ * Initializes Google Maps on the hackathon pages
+ */
+function initMap(){
+  var element = document.getElementById('map');
+  var point = {
+    lat: parseFloat(element.getAttribute('data-lat')),
+    lng: parseFloat(element.getAttribute('data-lon'))
+  };
+  var map = new google.maps.Map(element, {
+    center: point,
+    zoom: parseInt(element.getAttribute('data-zoom'), 0),
+    disableDefaultUI: true
+  });
+  var marker = new google.maps.Marker({
+    position: point,
+    map: map,
+    title: 'It\'s here!'
+  });
 }
 // TODO: Single file with JS [Mateusz]
 // TODO: Contact form support [Mateusz]

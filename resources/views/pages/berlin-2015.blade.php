@@ -3,6 +3,12 @@
 @section('title', 'Berlin 2015 October 16-18 - hacking.healthcare')
 @section('page-name', 'hackathon-page')
 
+@section('scripts')
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9tKJWqg9uY5ExRVN50uagt2owAIGb1CE&callback=initMap">
+</script>
+@endsection
+
 @section('content')
 
 <!-- TODO: Add defered loading for images [Mateusz] -->
@@ -64,13 +70,14 @@
 
         <div class="container">
             <div class="col left-col">
-                <div id="map"></div>
+                <div id="map" data-lat="52.518023" data-lon="13.388064" data-zoom="15"></div>
             </div>
             <div class="col">
-                Valencia College - Collaborative Design Center<br>
-                1800 S. Kirkman Road<br>
-                Building 10 - 3rd Floor<br>
-                Orlando, FL 32811<br>
+                BASE_camp<br>
+                Mittelstraße 51<br>
+                10117 Berlin<br>
+                Germany, Europe<br>
+                <a href="http://www.basecamp.info/">www.basecamp.info</a><br>
 
                 <a href="#tickets" class="button large-button">Get a Ticket</a>
             </div>

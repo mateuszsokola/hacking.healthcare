@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{url('style.css')}}">
     <script type="text/javascript" src="{{url('scripts/jquery-2.1.4.js')}}"></script>
     <script type="text/javascript" src="{{url('scripts/script.js')}}"></script>
+    @yield('scripts')
 </head>
 <body class="@yield('page-name')">
 <nav class="global-nav">
