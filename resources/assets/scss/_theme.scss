@@ -39,6 +39,7 @@ h1 {
 a {
   color: $brand-regular-link;
   text-decoration: none;
+  cursor: pointer !important;
 
   &:focus,
   &:hover {

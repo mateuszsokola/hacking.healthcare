@@ -34,7 +34,7 @@ $menu-icon-bar-height: 2px;
   background: $navbar-background-color;
   height: $global-nav-height;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   @include box-shadow(1px 0 5px rgba(0,0,0,.25));
 
   .container {
