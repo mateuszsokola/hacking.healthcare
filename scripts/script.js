@@ -29,7 +29,8 @@ function debounce(func, wait, immediate) {
     }
   };
 }
-
+// TODO: Single file with JS [Mateusz]
+// TODO: Contact form support [Mateusz]
 $(document).ready(function(){
   'use strict';
 
