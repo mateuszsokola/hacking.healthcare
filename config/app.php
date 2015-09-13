@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', true),
+    'debug' => env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://hacking.healthcare.app',
+    'url' => 'http://hacking.healthcare',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'ukvRzvoJPTquzYPL4KRLXJt4ePPvJYKD'),
+    'key' => env('APP_KEY', 'ukvRzvoJPTquzYPL4KRLxJt4ePDvJYKD'),
 
     'cipher' => 'AES-256-CBC',
 
