@@ -114,7 +114,7 @@ $menu-icon-bar-height: 2px;
     border-top: 1px solid $navbar-border-color;
     width: 100%;
 
-    > a,
+    > a:not(.button),
     > .link {
       // font
       color: $text-color;

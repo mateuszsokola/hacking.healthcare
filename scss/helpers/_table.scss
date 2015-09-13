@@ -1,21 +1,22 @@
 //
-// Tables
+// Table
 // --------------------------------------------------
-@import '../_config';
+@import '../config';
 
 // Config
 // --------------------------------------------------
 $thead-background: #f1f1f1;
 $tbody-background: #fafafa;
-$border-color: #c8c8c8;
+$border-color: $brand-border-color;
 
+$thead-text-color: $brand-dark-text;
 $text-size: 14px;
 
 // Base
 // --------------------------------------------------
 table {
   font-size: $text-size;
-  margin-top: 60px;
+  margin-top: 40px;
   width: 100%;
 
   thead th,
@@ -26,6 +27,7 @@ table {
   thead {
     tr {
       background: $thead-background;
+      color: $thead-text-color;
     }
   }
 

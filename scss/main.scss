@@ -20,28 +20,27 @@ Author URI: http://hacking.healthcare/
 @import 'mixins/_background-size';
 
 // Helpers
-@import 'helpers/_containers';
-@import 'helpers/_icons';
 @import 'helpers/_buttons';
-@import 'helpers/_hackathons';
-@import 'helpers/_persons';
+@import 'helpers/_icons';
 @import 'helpers/_screen-readers';
+@import 'helpers/_container';
+@import 'helpers/_hackathon';
+@import 'helpers/_person';
 @import 'helpers/_responsive';
 @import 'helpers/_text';
+@import 'helpers/_table';
 
 // Partials
 @import 'partials/_global-content';
 @import 'partials/_global-nav';
-@import 'partials/_eventbrite';
 @import 'partials/_sidebar';
-@import 'partials/_hackathon-lists';
-@import 'partials/_person-lists';
+@import 'partials/_hackathon-list';
+@import 'partials/_person-list';
 @import 'partials/_forms';
 @import 'partials/_footer';
-@import 'partials/_sponsors';
+@import 'partials/_partner-list';
 @import 'partials/_social-links';
 @import 'partials/_splashes';
-@import 'partials/_tables';
 
 // Pages
 @import 'pages/_home';

@@ -1,13 +1,14 @@
 //
-// Sponsors
+// Partner list
 // --------------------------------------------------
-
 @import '../_config';
 
 // Config
 // --------------------------------------------------
-$border-color: #636363;
+$border-color: $brand-border-color;
 
+// Base
+// --------------------------------------------------
 .partner-list {
   // shape
   margin: 10px -10px 20px;
@@ -18,14 +19,14 @@ $border-color: #636363;
   > li {
     position: relative;
     float: left;
-    width: 25%;
+    width: 100%;
     text-align: center;
     padding: 10px;
 
     > a {
       display: block;
       border: 1px solid $border-color;
-      height: 150px;
+      height: 130px;
       width: 100%;
       max-width: 225px;
       overflow: hidden;
@@ -40,15 +41,15 @@ $border-color: #636363;
     }
 
     @media (min-width: $breakpoint-smartphone) {
-      width: 100%;
-    }
-
-    @media (min-width: $breakpoint-tablet) {
       width: 50%;
     }
 
+    @media (min-width: $breakpoint-tablet) {
+      width: 33%;
+    }
+
     @media (min-width: $breakpoint-desktop) {
-      width: 25%;
+      width: 20%;
     }
   }
 }

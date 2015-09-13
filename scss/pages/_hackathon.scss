@@ -1,250 +1,236 @@
 //
 // Hackathon page
 // --------------------------------------------------
-
 @import '../_config';
 
-// Config
+// Base
 // --------------------------------------------------
-$text-font: 'Raleway', sans-serif;
-$text-size: 18px;
-$text-color: #fff;
-$text-transform: uppercase;
-$text-weight: normal;
-$text-decoration: none;
-$text-align: center;
-$line-height: 24px;
-
-$headline-size: 32px;
-$headline-line-height: 40px;
-
-
-.hackathon-splash {
-  // shape
-  @include background-size(cover);
-  overflow: hidden;
-  width: 100%;
-  // font
-  font-family: $text-font;
-  font-size: 14px;
-  line-height: $line-height;
-  text-transform: $text-transform;
-  color: $text-color;
-
-  h1 {
-    // font
-    font-family: $text-font;
-    font-size: 20px;
-    color: $text-color;
-    line-height: 24px;
-    text-transform: $text-transform;
-    // shape
-    margin: 0;
-  }
-
-  .hackathon-splash-inner {
-    // shape
-    background: rgba(0, 0, 0, .5); // fade background
-  }
+.hackathon-page {
 
   .container {
-    // shape
-    padding-top: 40px;
-    padding-bottom: 40px;
-    // font
-    text-align: center;
-  }
-}
-
-.hackathon-nav {
-  // default hidden
-  display: none;
-  // shape
-  background: #fff;
-  height: 50px;
-  width: 100%;
-  @include box-shadow(1px 0 5px rgba(0,0,0,.25));
-
-  .menu-nav {
-    // font
-    font-size: 12px;
-    // shape
-    margin: 0;
-
-    .button {
-      // font
-      font-size: 12px;
-      // shape
-      padding: 3px 12px;
-      margin-top: 3px;
-    }
-  }
-}
-
-.hackathon-section {
-  line-height: $line-height;
-}
-
-.hackathon-location {
-
-  .container {
-
-    .col {
-      width: 100%;
-    }
-
-    .map {
-      max-width: 300px;
-      height: 200px;
-      background: #f0f0f0;
-    }
-
-    .location {
-      line-height: $line-height;
-      max-width: 380px;
-      padding: 10px 0;
-
-      .button {
-        margin-top: 30px;
-      }
-    }
-  }
-}
-
-.hackathon-schedule {
-
-  .container {
-
-    h1 + table {
-      margin-top: 0;
-    }
-  }
-}
-
-.hackathon-mentors {
-  color: #7b7b7b;
-  line-height: 24px;
-
-  .name {
-    // shape
-    display: block;
-    margin: 15px 0;
-    // font
-    font-size: 20px;
-    color: #414141;
-  }
-
-  .profesion {
-    display: block;
-    font-size: 16px;
-  }
-
-  .person-photo,
-  .person-links {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .container {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 
     > .container {
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-      .col {
-        width: 100%;
-        max-width: 380px;
-        padding: 0;
+    > .col {
+      // shape
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      // shape
+      margin: 0; // override negative margin
 
-        &:first-child {
-          max-width: 300px;
-        }
+      // Tablet
+      @media (min-width: $breakpoint-tablet) {
+        // shape
+        display: table-cell;
+        vertical-align: top;
+        float: none;
       }
     }
   }
-}
 
-@media (min-width: $breakpoint-tablet) {
+  .splash {
+    // splash config
+    $splash-text-font: $brand-special-font;
+    $splash-text-transform: uppercase;
 
-  .hackathon-mentors {
-    .container > .container {
-      .name,
-      .profesion {
-        text-align: center;
-      }
+    $splash-mobile-line-height: 24px;
+    $splash-mobile-heading-size: 20px;
+    $splash-mobile-text-size: 14px;
+    $splash-mobile-padding: 40px 0;
 
-      .col,
-      .col:first-child {
-        max-width: none;
-      }
-    }
-  }
-}
+    $splash-desktop-line-height: 40px;
+    $splash-desktop-heading-size: 32px;
+    $splash-desktop-text-size: 18px;
+    $splash-desktop-padding: 80px 0;
 
-@media (min-width: $breakpoint-desktop) {
-  .hackathon-splash {
-    margin-top: $global-nav-height;
-    font-size: $text-size;
+    // font
+    font-family: $splash-text-font;
+    font-size: $splash-mobile-text-size;
+    line-height: $splash-mobile-line-height;
+    text-transform: $splash-text-transform;
 
     h1 {
-      font-size: $headline-size;
-      line-height: $headline-line-height;
+      // font
+      font-family: $splash-text-font;
+      font-size: $splash-mobile-heading-size;
+      line-height: $splash-mobile-line-height;
+      text-transform: $splash-text-transform;
+      // shape
+      margin: 0;
     }
 
     .container {
       // shape
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding: $splash-mobile-padding;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+
+      margin-top: $global-nav-height;
+      // font
+      font-size: $splash-desktop-text-size;
+      line-height: $splash-desktop-line-height;
+
+      h1 {
+        font-size: $splash-desktop-heading-size;
+        line-height: $splash-desktop-line-height;
+      }
+
+      .container {
+        // shape
+        padding: $splash-desktop-padding;
+      }
     }
   }
 
-  .hackathon-nav {
-    display: block;
-  }
+  .secondary-nav {
+    // config
+    $background-color: $brand-bright-text;
+    $link-size: $default-small-size;
 
+    // default hidden
+    display: none;
+    // shape
+    background: $background-color;
+    width: 100%;
+    @include box-shadow(1px 0 5px rgba(0, 0, 0, .25));
 
-  .hackathon-location {
-    .container .location {
-      padding-left: 20px;
+    .container {
+      padding: 5px;
+    }
+
+    .menu-nav {
+      // font
+      font-size: $link-size;
+      // shape
+      margin: 0;
+
+      .button {
+        margin-top: 6px;
+      }
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
     }
   }
 
-  .hackathon-mentors {
-    .container > .container {
-      .name,
-      .profesion {
-        text-align: left;
-      }
+  .location {
+    // config
+    $map-width: 300px;
+    $map-height: 200px;
+    $desktop-text-align: left;
+    $mobile-text-align: center;
 
-      .name {
-        margin-top: 0;
-      }
+    #map {
+      width: $map-width;
+      height: $map-height;
+      background: #f0f0f0;
+      margin: 0 auto 10px;
+    }
 
-      .col {
-        max-width: 400px;
+    .button {
+      margin-top: 30px;
+    }
+
+    .col {
+      // font
+      text-align: $mobile-text-align;
+
+      // Tablet
+      @media (min-width: $breakpoint-tablet) {
+        // shape
+        min-width: $map-width;
+        padding-left: 20px;
+        // font
+        text-align: $desktop-text-align;
 
         &:first-child {
-          max-width: 280px;
-          padding-right: 20px;
+          padding-left: 0;
+          width: 30%;
         }
       }
     }
   }
-}
 
-@media (min-width: $breakpoint-large) {
-
-  .hackathon-location {
-    .container .location {
-      max-width: 640px;
+  .schedule {
+    h1 + table {
+      margin-top: 0;
     }
   }
 
-  .hackathon-mentors {
-    .container > .container {
-      .col {
-        max-width: 660px;
+  .mentors {
+    $border-color: $brand-border-color;
+    $mentor-padding-vertical: 20px;
+    $mentor-picture-width: 185px;
+
+    .full-name-person {
+      margin-bottom: 10px;
+    }
+
+    .mentor {
+      border-bottom: 1px solid $border-color;
+      padding-bottom: $mentor-padding-vertical;
+      padding-top: $mentor-padding-vertical;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+
+      .full-name-person,
+      .profession-person {
+        text-align: left;
       }
+
+      .col {
+        // shape
+        min-width: $mentor-picture-width;
+        padding-left: 20px;
+
+        &:first-child {
+          padding-left: 0;
+          width: 15%;
+        }
+      }
+    }
+  }
+
+  .organizers {
+    margin-bottom: -25px;
+
+    .person-hlist {
+      margin-bottom: 0;
+    }
+  }
+
+  .tickets {
+    // config
+    $encouragement-text-color: $brand-dark-text;
+    $encouragement-text-align: center;
+    $encouragement-text-size: 18px;
+    $encouragement-line-height: 24px;
+    // base
+    text-align: $encouragement-text-align;
+
+    .encouragement {
+      // shape
+      margin-top: 20px;
+      display: block;
+      // font
+      font-size: $encouragement-text-size;
+      color: $encouragement-text-color;
+      line-height: $encouragement-line-height;
+    }
+
+    .button {
+      margin-top: 20px;
+      margin-bottom: 60px;
     }
   }
 }

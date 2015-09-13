@@ -32,6 +32,15 @@ $white-hover-text-color: $brand-dark-text;
 $white-hover-background-color: #fff;
 $white-hover-border-color: #fff;
 
+// small button
+$small-text-size: 12px;
+$small-padding-vertical: 3px;
+$small-padding-horizontal: 12px;
+
+// large button
+$large-text-size: 18px;
+$large-padding-vertical: 20px;
+$large-padding-horizontal: 40px;
 
 // Base styles
 // --------------------------------------------------
@@ -94,5 +103,19 @@ $white-hover-border-color: #fff;
       background-color: $white-hover-background-color;
       border-color: $white-hover-border-color;
     }
+  }
+
+  &.small-button {
+    // font
+    font-size: $small-text-size;
+    // shape
+    padding: $small-padding-vertical $small-padding-horizontal;
+  }
+
+  &.large-button {
+    // font
+    font-size: $large-text-size;
+    // shape
+    padding: $large-padding-vertical $large-padding-horizontal;
   }
 }
