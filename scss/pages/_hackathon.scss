@@ -7,6 +7,14 @@
 // --------------------------------------------------
 .hackathon-page {
 
+  &.sticky {
+    .secondary-nav {
+      position: fixed;
+      z-index: 1;
+      top: 64px;
+    }
+  }
+
   .container {
     padding-bottom: 10px;
 
@@ -215,8 +223,11 @@
     $encouragement-text-align: center;
     $encouragement-text-size: 18px;
     $encouragement-line-height: 24px;
-    // base
-    text-align: $encouragement-text-align;
+
+    .visible-below-tablet {
+      // font
+      text-align: $encouragement-text-align;
+    }
 
     .encouragement {
       // shape
@@ -229,6 +240,7 @@
     }
 
     .button {
+      // shape
       margin-top: 20px;
       margin-bottom: 60px;
     }
