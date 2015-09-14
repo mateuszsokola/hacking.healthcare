@@ -66,6 +66,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
-        // TODO add the task's body [Mateusz]
+        'sass',
     ]);
 };
