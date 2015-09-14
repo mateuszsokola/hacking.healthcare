@@ -50,12 +50,18 @@
 <div id="about" class="container">
     <h1>About</h1>
 
+    <span class="small-title">hacking.healthcare is bringing the Health Hackathon to Berlin!</span>
+
+    <p>Hackers, Doctors, Nurses, Designers, Patients and everyone who wants to save a life - get your ticket!</p>
+
+    <span class="small-title">What is a hackathon?</span>
+
     <p>A hackathon, as a concept, is simple. Starting on Friday, we come together to find groups to work in. Until Sunday evening we build prototypes, concepts and projects which we believe in.</p>
 
     <p>Taking part in the event, you are coached and helped by experts, you have access to resources and people whom you would never meet "outside". It is a weekend of free thinking with focus on current issues and projects of passion. But, you need to deliver! This we believe, is how change happens. Not just talk, but action.</p>
 
     <span class="small-title">What can we achieve?</span>
-    <p>In Vienna 66 health hackers came up with 17 ideas. Out of this 8 ideas survived and groups were formed which worked on them in collaborative and interdisciplinary fashion. Out of those 8 projects only one didn’t make it to it’s finalization. The remaining diverse set of 7 projects were then presented and applauded by our participants. Among those 7 projects were:</p>
+    <p>In Vienna on our first event, 66 health hackers came up with 17 ideas. Out of this 8 ideas survived and groups were formed which worked on them in collaborative and interdisciplinary fashion. Out of those 8 projects only one didn’t make it to it’s finalization. The remaining diverse set of 7 projects were then presented and applauded by our participants. Among those 7 projects were:</p>
     <p>mySugr Buddy - Improving diabetes therapy with the help of artificial intelligence and surveys in a game like manner.</p>
     <p>Speech Therapy Games - To support children in their speech correction, this team developed a game that helps them with the pronunciation of words, syllables and the creation of noises.</p>
     <p>Sigmund Frog - Children’s waiting rooms are boring and could be way more exciting! With the help of an XBOX and Kinect, children are educated in a game like manner how to brush their teeth. Currently being developed together with Tieto Enator and MS!</p>
