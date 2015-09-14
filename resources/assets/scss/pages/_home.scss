@@ -25,7 +25,18 @@
     $desktop-headline-size: 32px;
     $desktop-headline-line-height: 42px;
 
-    .container {
+    // shape
+    position: relative;
+    min-height: 90%;
+
+    .inner-splash {
+      // shape
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
+    .valign {
       // shape
       padding-top: $mobile-padding-top;
       padding-bottom: $mobile-padding-bottom;
@@ -55,7 +66,7 @@
 
     // Smartphone
     @media (min-width: $breakpoint-smartphone) {
-      .container {
+      .valign {
         // shape
         padding-top: $desktop-padding-top;
         padding-bottom: $desktop-padding-bottom;

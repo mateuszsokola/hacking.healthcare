@@ -6,7 +6,7 @@
 @section('content')
     <div class="splash" style="background: url('assets/home-splash.jpg') center center no-repeat;">
         <div class="inner-splash">
-            <div class="container">
+            <div class="valign">
                 <h1>
                     <span class="headline">Doctors, Designers, Coders and Doers.</span>
                     Together we can make a difference.
