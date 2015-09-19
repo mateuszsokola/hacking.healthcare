@@ -59,6 +59,31 @@ $(document).ready(function(){
   // --------------------------------------------------
   var $window = $(window);
   var $body = $('body');
+  var $cookie = $('.cookie');
+  var COOKIE_COOKIE = 'hh_cookie=1';
+
+
+  //
+  // Cookie Policy
+  // --------------------------------------------------
+  if ($cookie.length) {
+    var regexp = new RegExp(COOKIE_COOKIE, 'i');
+
+    if ( ! regexp.test(document.cookie)) {
+      // show cookie info
+      $cookie.css('display', 'block');
+
+      // bind cookie close button
+      $cookie
+        .find('span.button')
+          .click(function(){
+            // hide cookie info
+            $cookie.css('display', 'none');
+            // set up a cookie
+            document.cookie = COOKIE_COOKIE;
+        });
+    }
+  }
 
   //
   // Menu Nav

@@ -1,0 +1,44 @@
+//
+// Cookie
+// --------------------------------------------------
+@import '../_config';
+
+// Config
+// --------------------------------------------------
+$text-font: $default-text-font;
+$text-size: 12px;
+$text-height: 16px;
+$text-color: #e9e9e9;
+$text-align: center;
+
+$background-color: #111;
+
+// Base
+// --------------------------------------------------
+.cookie {
+  display: none;
+  // position
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  // shape
+  background: $background-color;
+  @include box-shadow(inset 0 2px 5px rgba(0, 0, 0, 0.3));
+  padding: 25px 10px;
+  width: 100%;
+  // font
+  font-family: $text-font;
+  font-size: $text-size;
+  line-height: $text-height;
+  text-align: $text-align;
+  color: $text-color;
+
+  .button {
+    margin-top: 20px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    top: $global-nav-height;
+  }
+}
+

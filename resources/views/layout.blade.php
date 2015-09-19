@@ -146,5 +146,14 @@
         in Vienna
     </p>
 </div>
+<div class="cookie">
+    <p>
+        We are using cookies to give you the best experience on our site.
+        Cookies are files stored in your browser and are used by most websites to help personalise your web experience.
+    </p>
+    <p>By continuing to use our website without changing the settings, you are agreeing to our use of cookies.</p>
+
+    <span class="button small-button">Hide information</span>
+</div>
 </body>
 </html>
