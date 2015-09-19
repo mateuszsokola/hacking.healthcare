@@ -129,7 +129,7 @@
 
     <ul class="partner-list">
         <li>
-            <a href="http://facebook.com">
+            <a href="http://www.ibm.com/de/de/">
                 <img src="{{url('assets/sponsor-ibm.png')}}" alt="IBM" width="210" height="60">
             </a>
         </li>

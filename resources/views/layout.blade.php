@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    @yield('meta')
     <title>@yield('title')</title>
     <link
         href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Raleway:500"
@@ -64,6 +65,9 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="/sponsors">Sponsors</a>
+                </li>
+                <li>
                     <a href="/team">Team</a>
                 </li>
             </ul>
@@ -92,7 +96,7 @@
                     <a href="/team">Team</a>
                 </li>
                 <li>
-                    <a href="/privacy">Privacy</a>
+                    <a href="/privacy">Privacy Policy</a>
                 </li>
                 <li>
                     <a href="/imprint">Imprint</a>
@@ -119,23 +123,28 @@
         </div>
         <div class="col about-col">
             <span class="title">About</span>
-
             hacking.healthcare HQ<br>
-            Nussdorferstraße 88/22<br>
-            AT-1080 Vienna<br>
+            1090 Vienna<br>
             Austria<br>
+            ZVR: 895857915<br>
 
             <a href="mailto:office@hacking.healthcare" class="imprint-link">
-                Contact
+                Contact / Support
             </a>
         </div>
     </div>
 </div>
 <div class="footer">
-    Made with
-    <span class="icon-heart"></span>
-    <span class="only-screen-readers">love</span>
-    in Vienna
+    <p>
+        &copy; 2015 Entrepreneurship - Verein zur Förderung der Entwicklung und des unternehmerischen Denkens.
+        All rights reserved.
+    </p>
+    <p>
+        Made with
+        <span class="icon-heart"></span>
+        <span class="only-screen-readers">love</span>
+        in Vienna
+    </p>
 </div>
 </body>
 </html>

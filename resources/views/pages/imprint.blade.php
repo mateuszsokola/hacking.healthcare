@@ -9,12 +9,9 @@
             <h1>Imprint</h1>
 
             <span class="small-title">Entrepreneurship - Verein zur Förderung der Entwicklung und des unternehmerischen Denkens</span>
-            Nussdorferstraße 88/22<br>
-            AT-1080 Vienna<br>
+            AT-1090 Vienna<br>
             Austria<br>
-
-            <span class="small-title">Contact Person: Stephanie Ness</span>
-            Company No.: ATU68811039<br>
+            ZVR: 895857915<br>
 
             <span class="small-title">Disclaimer</span>
             hacking.healthcare assumes no liability for the completeness and accuracy of the content of this website.

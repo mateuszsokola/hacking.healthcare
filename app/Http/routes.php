@@ -27,6 +27,10 @@ Route::get('/past', function () {
     return view('pages/past');
 });
 
+Route::get('/sponsors', function () {
+    return view('pages/sponsors');
+});
+
 Route::get('/team', function () {
     return view('pages/team');
 });

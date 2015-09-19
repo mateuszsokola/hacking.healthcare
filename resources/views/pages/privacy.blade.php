@@ -2,6 +2,9 @@
 
 @section('title', 'Privacy Policy - hacking.healthcare')
 @section('page-name', 'privacy-page')
+@section('meta')
+<meta name="robots" content="noindex">
+@endsection
 
 @section('content')
     <div class="global-content">
