@@ -42,3 +42,35 @@ Route::get('/privacy', function () {
 Route::get('/imprint', function () {
     return view('pages/imprint');
 });
+
+Route::get('/sponsors.html', function () {
+
+    return redirect('/sponsors', 301);
+});
+
+//
+// Handle "Gone" pages for SEO reasons
+//
+Route::get('/speakers', function () {
+    $view = view('errors/404');
+
+    return response($view, 410);
+});
+
+Route::get('/speaker-lineup/{name}', function () {
+    $view = view('errors/404');
+
+    return response($view, 410);
+});
+
+Route::get('/tickets.html', function () {
+    $view = view('errors/404');
+
+    return response($view, 410);
+});
+
+Route::get('/contact.html', function () {
+    $view = view('errors/404');
+
+    return response($view, 410);
+});
