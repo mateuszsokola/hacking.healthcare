@@ -111,7 +111,7 @@ $(document).ready(function(){
     var navHeight = 235;
 
     // bind scrolling to the events"
-    $('.secondary-nav').find('a').click(function(e){
+    $('.secondary-nav').find('a:not(.button)').click(function(e){
       e.preventDefault();
 
       var sectionSelector = this.getAttribute('href');
