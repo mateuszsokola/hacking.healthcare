@@ -40,7 +40,7 @@
                 <a href="#organizers">Organizers</a>
             </li>
             <li>
-                <a href="#tickets" class="button small-button">Get a Ticket</a>
+                <a href="http://hh-berlin-2015.eventbrite.com" class="button small-button">Get a Ticket</a>
             </li>
         </ul>
 
