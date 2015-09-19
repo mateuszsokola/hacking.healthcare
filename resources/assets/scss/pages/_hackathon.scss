@@ -29,9 +29,13 @@
         padding-right: 0;
         // shape
         margin: 0; // override negative margin
+      }
 
-        // Tablet
-        @media (min-width: $breakpoint-tablet) {
+      // Tablet
+      @media (min-width: $breakpoint-tablet) {
+        width: auto;
+
+        > .col {
           // shape
           display: table-cell;
           vertical-align: top;
@@ -133,7 +137,7 @@
 
   .location {
     // config
-    $map-width: 300px;
+    $map-width: 280px;
     $map-height: 200px;
     $desktop-text-align: left;
     $mobile-text-align: center;
@@ -141,7 +145,6 @@
     #map {
       width: $map-width;
       height: $map-height;
-      background: #f0f0f0;
       margin: 0 auto 10px;
     }
 
@@ -152,6 +155,10 @@
     .container > .col {
       // font
       text-align: $mobile-text-align;
+
+      &:first-child {
+        padding: 0;
+      }
 
       // Tablet
       @media (min-width: $breakpoint-tablet) {

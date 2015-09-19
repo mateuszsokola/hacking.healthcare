@@ -378,7 +378,6 @@ th {
 
 .container {
   max-width: 720px;
-  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -1304,6 +1303,9 @@ label {
   margin: 0;
 }
 @media (min-width: 720px) {
+  .hackathon-page .container > .container {
+    width: auto;
+  }
   .hackathon-page .container > .container > .col {
     display: table-cell;
     vertical-align: top;
@@ -1363,9 +1365,8 @@ label {
   }
 }
 .hackathon-page .location #map {
-  width: 300px;
+  width: 280px;
   height: 200px;
-  background: #f0f0f0;
   margin: 0 auto 10px;
 }
 .hackathon-page .location .button {
@@ -1374,9 +1375,12 @@ label {
 .hackathon-page .location .container > .col {
   text-align: center;
 }
+.hackathon-page .location .container > .col:first-child {
+  padding: 0;
+}
 @media (min-width: 720px) {
   .hackathon-page .location .container > .col {
-    min-width: 300px;
+    min-width: 280px;
     padding-left: 20px;
     text-align: left;
   }
