@@ -31,6 +31,10 @@ Route::get('/team', function () {
     return view('pages/team');
 });
 
+Route::get('/privacy', function () {
+    return view('pages/privacy');
+});
+
 Route::get('/imprint', function () {
     return view('pages/imprint');
 });

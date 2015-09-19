@@ -92,6 +92,9 @@
                     <a href="/team">Team</a>
                 </li>
                 <li>
+                    <a href="/privacy">Privacy</a>
+                </li>
+                <li>
                     <a href="/imprint">Imprint</a>
                 </li>
             </ul>
