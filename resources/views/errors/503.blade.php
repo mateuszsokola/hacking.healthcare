@@ -1,47 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
+@extends('layout')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title', '503 - hacking.healthcare')
+@section('page-name', 'error-page')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
+@section('content')
+    <div class="global-content">
         <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
-            </div>
+            <h1>Be right back</h1>
+
+            <p>
+                <a href="/">Go to the homepage</a>
+            </p>
         </div>
-    </body>
-</html>
+    </div>
+@endsection

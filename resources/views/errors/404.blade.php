@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title', '404 - hacking.healthcare')
-@section('page-name', 'imprint-page')
+@section('page-name', 'error-page')
 
 @section('content')
     <div class="global-content">
