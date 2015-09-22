@@ -99,6 +99,22 @@
             </tr>
             </thead>
             <tbody>
+            <tr>
+                <td>18:00</td>
+                <td>Doors open</td>
+            </tr>
+            <tr>
+                <td>18:30</td>
+                <td>Intro to Hackathon, it’s time to get started!</td>
+            </tr>
+            <tr>
+                <td>19:30</td>
+                <td>Snack – or simply get started!</td>
+            </tr>
+            <tr>
+                <td>23:00</td>
+                <td>Goodbyes - close the doors</td>
+            </tr>
             </tbody>
         </table>
 
@@ -109,6 +125,26 @@
             </tr>
             </thead>
             <tbody>
+            <tr>
+                <td>09:00</td>
+                <td>Doors open</td>
+            </tr>
+            <tr>
+                <td>10:00</td>
+                <td>IBM Workshop</td>
+            </tr>
+            <tr>
+                <td>12:00</td>
+                <td>Lunch Break</td>
+            </tr>
+            <tr>
+                <td>13:30</td>
+                <td>Mentors start dropping in!</td>
+            </tr>
+            <tr>
+                <td>23:00</td>
+                <td>Goodbyes - close the doors</td>
+            </tr>
             </tbody>
         </table>
 
@@ -119,18 +155,43 @@
             </tr>
             </thead>
             <tbody>
+            <tr>
+                <td>09:00</td>
+                <td>Doors open</td>
+            </tr>
+            <tr>
+                <td>12:00</td>
+                <td>Lunch Break</td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td>Mentors start dropping in!</td>
+            </tr>
+            <tr>
+                <td>17:00</td>
+                <td>Final Presentations - let the ceremony begin!</td>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <td>Networking and beers :)</td>
+            </tr>
             </tbody>
         </table>
     </div>
 </div>
 
 <div id="sponsors" class="container">
-    <h1>Sponsors</h1>
+    <h1>Partners</h1>
 
     <ul class="partner-list">
         <li>
             <a href="http://www.ibm.com/de/de/">
                 <img src="{{url('assets/sponsor-ibm.png')}}" alt="IBM" width="210" height="60">
+            </a>
+        </li>
+        <li>
+            <a href="http://health20berlin.com/">
+                <img src="{{url('assets/partner-health20.jpeg')}}" alt="Health20 Berlin" width="100" height="125">
             </a>
         </li>
     </ul>

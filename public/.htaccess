@@ -5,6 +5,10 @@
 
     RewriteEngine On
 
+    # Redirect from https to http urls
+    RewriteCond %{HTTPS} on
+    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
     # Redirect www to non-www urls
     RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
     RewriteRule ^(.*)$ http://%1/$1 [R=301,L]

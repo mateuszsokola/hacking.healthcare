@@ -38,6 +38,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="http://health20berlin.com/">
+                        <img src="{{url('assets/partner-health20.jpeg')}}" alt="Health20 Berlin" width="100" height="125">
+                    </a>
+                </li>
+                <li>
                     <a href="http://www.inits.at/">
                         <img src="{{url('assets/partner-inits.png')}}" alt="Inits" width="168" height="84">
                     </a>
