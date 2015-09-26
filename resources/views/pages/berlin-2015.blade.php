@@ -80,9 +80,15 @@
                 Mittelstraße 51<br>
                 10117 Berlin<br>
                 Germany, Europe<br>
-                <a href="http://www.basecamp.info/">www.basecamp.info</a><br>
+                <a href="http://www.basecamp.info/" target="_blank">
+                    www.basecamp.info
+                </a><br>
 
-                <a href="http://hh-berlin-2015.eventbrite.com" class="button large-button">Get a Ticket</a>
+                <a href="http://hh-berlin-2015.eventbrite.com"
+                   class="button large-button"
+                   target="_blank">
+                    Get a Ticket
+                </a>
             </div>
         </div>
     </div>
@@ -100,8 +106,17 @@
             </thead>
             <tbody>
             <tr>
-                <td>18:00</td>
+                <td>14:30</td>
                 <td>Doors open</td>
+            </tr>
+            <tr>
+                <td>15:00</td>
+                <td>
+                    <a href="https://www.eventbrite.de/e/bluemix-hands-on-workshop-tickets-18735562572"
+                       target="_blank">
+                        Bluemix Hands-on Workshop
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>18:30</td>
@@ -185,12 +200,12 @@
 
     <ul class="partner-list">
         <li>
-            <a href="http://www.ibm.com/de/de/">
+            <a href="http://www.ibm.com/de/de/" target="_blank">
                 <img src="{{url('assets/sponsor-ibm.png')}}" alt="IBM" width="210" height="60">
             </a>
         </li>
         <li>
-            <a href="http://health20berlin.com/">
+            <a href="http://health20berlin.com/" target="_blank">
                 <img src="{{url('assets/partner-health20.jpeg')}}" alt="Health20 Berlin" width="100" height="125">
             </a>
         </li>
@@ -212,15 +227,15 @@
                 <span class="first-name-person">Fredrik</span>
                 <span class="last-name-person">Debong</span>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/fdebong">
+                    <a href="https://www.facebook.com/fdebong" target="_blank">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="https://twitter.com/fdebong">
+                    <a href="https://twitter.com/fdebong" target="_blank">
                         <span class="icon-twitter"></span>
                         <span class="only-screen-readers">Twitter</span>
                     </a>
-                    <a href="https://mysugr.com/">
+                    <a href="https://mysugr.com/" target="_blank">
                         <span class="icon-home"></span>
                         <span class="only-screen-readers">Home Page</span>
                     </a>
@@ -237,11 +252,11 @@
                 <span class="first-name-person">Stephanie</span>
                 <span class="last-name-person">Ness</span>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/StephanieNess1989">
+                    <a href="https://www.facebook.com/StephanieNess1989" target="_blank">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="https://at.linkedin.com/in/nessstephanie">
+                    <a href="https://at.linkedin.com/in/nessstephanie" target="_blank">
                         <span class="icon-linkedin"></span>
                         <span class="only-screen-readers">Linkedin</span>
                     </a>
@@ -258,11 +273,11 @@
                 <span class="first-name-person">Matt</span>
                 <span class="last-name-person">Sokola</span>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/mateusz.sokola">
+                    <a href="https://www.facebook.com/mateusz.sokola" target="_blank">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="https://at.linkedin.com/pub/mateusz-sokola/72/b20/770">
+                    <a href="https://at.linkedin.com/pub/mateusz-sokola/72/b20/770" target="_blank">
                         <span class="icon-linkedin"></span>
                         <span class="only-screen-readers">Linkedin</span>
                     </a>
@@ -279,11 +294,11 @@
                 <span class="first-name-person">Christian</span>
                 <span class="last-name-person">Weichselbaum</span>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/weichselbaum">
+                    <a href="https://www.facebook.com/weichselbaum" target="_blank">
                         <span class="icon-facebook"></span>
                         <span class="only-screen-readers">Facebook</span>
                     </a>
-                    <a href="https://at.linkedin.com/in/christianweichselbaum">
+                    <a href="https://at.linkedin.com/in/christianweichselbaum" target="_blank">
                         <span class="icon-linkedin"></span>
                         <span class="only-screen-readers">Linkedin</span>
                     </a>

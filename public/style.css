@@ -312,6 +312,34 @@ th {
   background-color: #fff;
   border-color: #fff;
 }
+.button.blue-button {
+  color: #fff;
+  background-color: #00aeff;
+  border-color: #00aeff;
+}
+.button.blue-button:focus, .button.blue-button.focus, .button.blue-button:hover {
+  color: #fff;
+  background-color: #008bcc;
+  border-color: #0084c2;
+  text-decoration: none;
+}
+.button.blue-button:active, .button.blue-button.active, .open > .button.blue-button.dropdown-toggle {
+  color: #fff;
+  background-color: #008bcc;
+  border-color: #0084c2;
+}
+.button.blue-button:active:hover, .button.blue-button:active:focus, .button.blue-button:active.focus, .button.blue-button.active:hover, .button.blue-button.active:focus, .button.blue-button.active.focus, .open > .button.blue-button.dropdown-toggle:hover, .open > .button.blue-button.dropdown-toggle:focus, .open > .button.blue-button.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #0073a8;
+  border-color: #005780;
+}
+.button.blue-button:active, .button.blue-button.active, .open > .button.blue-button.dropdown-toggle {
+  background-image: none;
+}
+.button.blue-button.disabled, .button.blue-button.disabled:hover, .button.blue-button.disabled:focus, .button.blue-button.disabled.focus, .button.blue-button.disabled:active, .button.blue-button.disabled.active, .button.blue-button[disabled], .button.blue-button[disabled]:hover, .button.blue-button[disabled]:focus, .button.blue-button[disabled].focus, .button.blue-button[disabled]:active, .button.blue-button[disabled].active, fieldset[disabled] .button.blue-button, fieldset[disabled] .button.blue-button:hover, fieldset[disabled] .button.blue-button:focus, fieldset[disabled] .button.blue-button.focus, fieldset[disabled] .button.blue-button:active, fieldset[disabled] .button.blue-button.active {
+  background-color: #00aeff;
+  border-color: #00aeff;
+}
 .button.small-button {
   font-size: 12px;
   padding: 3px 12px;
@@ -1433,6 +1461,10 @@ label {
 .hackathon-page .tickets .button {
   margin-top: 20px;
   margin-bottom: 60px;
+}
+
+.what_we_achieved-page .global-content .text-center {
+  margin-top: 60px;
 }
 
 html {

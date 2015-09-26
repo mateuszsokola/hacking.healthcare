@@ -53,6 +53,9 @@
                 id="menu-container"
                 >
             <ul class="menu-nav">
+                <li>
+                    <a href="/what-we-achieved">What We Achieved</a>
+                </li>
                 <li class="has-dropdown"> <!-- dropdown-open -->
                     <span class="link">Events</span>
                     <ul class="dropdown-menu">
@@ -112,11 +115,15 @@
         </div>
         <div class="col follow-col">
             <span class="title">Follow us</span>
-            <a href="https://www.facebook.com/hacking.healthcare" class="follow-link">
+            <a href="https://www.facebook.com/hacking.healthcare"
+               class="follow-link"
+               target="_blank">
                 <span class="icon-facebook"></span>
                 <span class="only-screen-readers">Facebook</span>
             </a>
-            <a href="https://twitter.com/hackhealthcare" class="follow-link">
+            <a href="https://twitter.com/hackhealthcare"
+               class="follow-link"
+               target="_blank">
                 <span class="icon-twitter"></span>
                 <span class="only-screen-readers">Twitter</span>
             </a>

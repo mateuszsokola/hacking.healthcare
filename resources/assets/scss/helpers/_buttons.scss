@@ -24,6 +24,11 @@ $default-button-text-color: #fff;
 $default-button-background-color: #c90000;
 $default-button-border-color: #c90000;
 
+// blue button
+$blue-button-text-color: #fff;
+$blue-button-background-color: $brand-blue;
+$blue-button-border-color: $brand-blue;
+
 // white button
 $white-normal-text-color: #fff;
 $white-normal-background-color: transparent;
@@ -103,6 +108,14 @@ $large-padding-horizontal: 40px;
       background-color: $white-hover-background-color;
       border-color: $white-hover-border-color;
     }
+  }
+
+  &.blue-button {
+    @include button-variant(
+      $blue-button-text-color,
+      $blue-button-background-color,
+      $blue-button-border-color
+    );
   }
 
   &.small-button {

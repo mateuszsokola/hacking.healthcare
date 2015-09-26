@@ -80,7 +80,7 @@ $(document).ready(function(){
             // hide cookie info
             $cookie.css('display', 'none');
             // set up a cookie
-            document.cookie = COOKIE_COOKIE;
+            document.cookie = ''+COOKIE_COOKIE+';expires=Tue, 31 Oct 2017 08:50:17 GMT;path=/';
         });
     }
   }

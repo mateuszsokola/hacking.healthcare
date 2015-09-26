@@ -15,7 +15,7 @@
                         <a
                             class="inner-tile-hackathon"
                             href="https://www.facebook.com/media/set/?set=a.1561600160751326.1073741830.1553212924923383&type=3"
-                            >
+                            target="_blank">
                             <span class="valign">
                                 <span class="hackathon-city">Vienna #1</span>
                                 January 2015
@@ -28,7 +28,7 @@
                         <a
                             class="inner-tile-hackathon"
                             href="https://www.facebook.com/media/set/?set=a.1622724671305541.1073741832.1553212924923383&type=3"
-                            >
+                            target="_blank">
                             <span class="valign">
                                 <span class="hackathon-city">Vienna #2</span>
                                 May 2015
