@@ -38,6 +38,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="http://www.diabetesevents.info/" target="_blank">
+                        <img src="{{url('assets/partner-diabeticsevents.png')}}" alt="Codete" width="125" height="125">
+                    </a>
+                </li>
+                <li>
                     <a href="http://health20berlin.com/" target="_blank">
                         <img src="{{url('assets/partner-health20.jpeg')}}" alt="Health20 Berlin" width="100" height="125">
                     </a>
@@ -50,6 +55,11 @@
                 <li>
                     <a href="http://www.lisavienna.at/" target="_blank">
                         <img src="{{url('assets/partner-lisa.png')}}" alt="LisaVienna" width="210" height="60">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.lumind.de/" target="_blank">
+                        <img src="{{url('assets/partner-lumind.png')}}" alt="Lumind" width="210" height="60">
                     </a>
                 </li>
                 <li>
