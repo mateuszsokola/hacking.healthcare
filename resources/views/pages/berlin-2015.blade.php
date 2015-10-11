@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Berlin 2015 October 16-18 - hacking.healthcare')
+@section('title', 'Berlin 2016 - hacking.healthcare')
 @section('page-name', 'hackathon-page')
 
 @section('scripts')
@@ -16,7 +16,7 @@
     <div class="inner-splash">
         <div class="container">
             <h1>Berlin</h1>
-            <span class="date">October 16-18</span>
+            <span class="date">TBA</span>
         </div>
     </div>
 </div>
@@ -28,19 +28,10 @@
                 <a href="#about">About</a>
             </li>
             <li>
-                <a href="#location">Location</a>
-            </li>
-            <li>
-                <a href="#schedule">Schedule</a>
-            </li>
-            <li>
                 <a href="#sponsors">Sponsors</a>
             </li>
             <li>
                 <a href="#organizers">Organizers</a>
-            </li>
-            <li>
-                <a href="http://hh-berlin-2015.eventbrite.com" class="button small-button">Get a Ticket</a>
             </li>
         </ul>
 
@@ -65,134 +56,6 @@
     <p>mySugr Buddy - Improving diabetes therapy with the help of artificial intelligence and surveys in a game like manner.</p>
     <p>Speech Therapy Games - To support children in their speech correction, this team developed a game that helps them with the pronunciation of words, syllables and the creation of noises.</p>
     <p>Sigmund Frog - Children’s waiting rooms are boring and could be way more exciting! With the help of an XBOX and Kinect, children are educated in a game like manner how to brush their teeth. Currently being developed together with Tieto Enator and MS!</p>
-</div>
-
-<div id="location" class="location">
-    <div class="container">
-        <h1>Location</h1>
-
-        <div class="container">
-            <div class="col left-col">
-                <div id="map" data-lat="52.518023" data-lon="13.388064" data-zoom="15"></div>
-            </div>
-            <div class="col">
-                BASE_camp<br>
-                Mittelstraße 51<br>
-                10117 Berlin<br>
-                Germany, Europe<br>
-                <a href="http://www.basecamp.info/" target="_blank">
-                    www.basecamp.info
-                </a><br>
-
-                <a href="http://hh-berlin-2015.eventbrite.com"
-                   class="button large-button"
-                   target="_blank">
-                    Get a Ticket
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="schedule" class="schedule">
-    <div class="container">
-        <h1>Schedule</h1>
-
-        <table>
-            <thead>
-            <tr>
-                <th colspan="2">Friday, 16th October</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>14:30</td>
-                <td>Doors open</td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td>
-                    <a href="https://www.eventbrite.de/e/bluemix-hands-on-workshop-tickets-18735562572"
-                       target="_blank">
-                        Bluemix Hands-on Workshop
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>18:30</td>
-                <td>Intro to Hackathon, it’s time to get started!</td>
-            </tr>
-            <tr>
-                <td>19:30</td>
-                <td>Snack – or simply get started!</td>
-            </tr>
-            <tr>
-                <td>23:00</td>
-                <td>Goodbyes - close the doors</td>
-            </tr>
-            </tbody>
-        </table>
-
-        <table>
-            <thead>
-            <tr>
-                <th colspan="2">Saturday, 17th October</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>09:00</td>
-                <td>Doors open</td>
-            </tr>
-            <tr>
-                <td>10:00</td>
-                <td>IBM Workshop</td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td>Lunch Break</td>
-            </tr>
-            <tr>
-                <td>13:30</td>
-                <td>Mentors start dropping in!</td>
-            </tr>
-            <tr>
-                <td>23:00</td>
-                <td>Goodbyes - close the doors</td>
-            </tr>
-            </tbody>
-        </table>
-
-        <table>
-            <thead>
-            <tr>
-                <th colspan="2">Sunday, 18th October</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>09:00</td>
-                <td>Doors open</td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td>Lunch Break</td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>Mentors start dropping in!</td>
-            </tr>
-            <tr>
-                <td>17:00</td>
-                <td>Final Presentations - let the ceremony begin!</td>
-            </tr>
-            <tr>
-                <td>19:00</td>
-                <td>Networking and beers :)</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
 </div>
 
 <div id="sponsors" class="container">

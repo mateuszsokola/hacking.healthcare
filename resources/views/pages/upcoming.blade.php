@@ -16,7 +16,7 @@
                         <a class="inner-tile-hackathon" href="upcoming/berlin-2015">
                             <span class="valign">
                                 <span class="hackathon-city">Berlin</span>
-                                October 16-18
+                                TBA
                             </span>
                         </a>
                     </div>
