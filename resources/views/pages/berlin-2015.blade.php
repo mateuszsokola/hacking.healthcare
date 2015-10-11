@@ -181,20 +181,4 @@
     </div>
 </div>
 
-<div id="tickets" class="tickets">
-    <div class="container">
-        <h1>Tickets</h1>
-        <div class="visible-above-tablet">
-            <iframe src="//eventbrite.com/tickets-external?eid=18595040266&ref=etckt" frameborder="0" height="500" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
-            <div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" >
-                <a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Powered by Eventbrite</a>
-            </div>
-        </div>
-        <div class="visible-below-tablet">
-            <span class="encouragement">Are you ready to join us?</span>
-            <a href="http://hh-berlin-2015.eventbrite.com" class="button large-button">Get a Ticket</a>
-        </div>
-    </div>
-</div>
-
 @endsection
